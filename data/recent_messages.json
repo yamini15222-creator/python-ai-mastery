@@ -1,0 +1,14 @@
+[
+  {
+    "role": "assistant",
+    "content": "Python is a programming language."
+  },
+  {
+    "role": "user",
+    "content": "What is RAG?"
+  },
+  {
+    "role": "assistant",
+    "content": "RAG retrieves relevant knowledge first."
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "model": "gpt-5",
+  "temperature": 0.5,
+  "max_tokens": 300,
+  "tools_enabled": [
+    "knowledge_search",
+    "calculator"
+  ]
+}
