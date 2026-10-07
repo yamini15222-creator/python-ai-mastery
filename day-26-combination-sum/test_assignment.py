@@ -1,7 +1,6 @@
 """Unit tests for the budget package builder."""
 
 import pytest
-
 from assignment import build_packages
 
 

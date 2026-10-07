@@ -1,7 +1,6 @@
 """Tests for warehouse product-code search."""
 
 import pytest
-
 from assignment import (
     GridValidationError,
     ProductCodeValidationError,

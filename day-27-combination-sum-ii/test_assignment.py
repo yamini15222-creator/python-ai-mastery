@@ -1,7 +1,6 @@
 """Unit tests for the one-time coupon bundle builder."""
 
 import pytest
-
 from assignment import coupon_bundles
 
 

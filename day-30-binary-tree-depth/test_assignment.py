@@ -1,7 +1,6 @@
 """Tests for binary-tree hierarchy depth."""
 
 import pytest
-
 from assignment import (
     HierarchyCycleError,
     TreeNode,

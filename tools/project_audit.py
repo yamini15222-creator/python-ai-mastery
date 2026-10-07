@@ -1,6 +1,5 @@
 from pathlib import Path
 
-
 REQUIRED_PATHS = [
     Path("README.md"),
     Path(".gitignore"),

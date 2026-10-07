@@ -1,0 +1,3312 @@
+[1mdiff --git a/README.md b/README.md[m
+[1mindex e69de29..d9232eb 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -0,0 +1,120 @@[m
+[32m+[m[32m# Python AI Mastery[m
+[32m+[m
+[32m+[m[32mA structured Python project for learning and building reliable AI-focused applications through practical exercises, validation, testing, and professional development workflows.[m
+[32m+[m
+[32m+[m[32m## Problem[m
+[32m+[m
+[32m+[m[32mAI applications need more than model code. They also require reliable input validation, structured data handling, testing, documentation, and safe development practices.[m
+[32m+[m
+[32m+[m[32mThis project focuses on building those software engineering foundations while developing AI-related functionality step by step.[m
+[32m+[m
+[32m+[m[32m## Solution[m
+[32m+[m
+[32m+[m[32mThe project organizes Python learning and AI exercises into reusable modules and tests.[m
+[32m+[m
+[32m+[m[32mThe Day 8–9 feature validates a learner's topic and AI settings before creating a structured request. It prevents empty topics and invalid token limits, making future AI features safer and more reliable.[m
+[32m+[m
+[32m+[m[32m## Architecture[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32mUser Input[m
+[32m+[m[32m    ↓[m
+[32m+[m[32mValidation[m
+[32m+[m[32m    ↓[m
+[32m+[m[32mStructured Request[m
+[32m+[m[32m    ↓[m
+[32m+[m[32mAI Feature[m
+[32m+[m[32m    ↓[m
+[32m+[m[32mResult[m
+[32m+[m[32m    ↓[m
+[32m+[m[32mTests & Evaluation[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m### Main Components[m
+[32m+[m
+[32m+[m[32m- `ai_core/` — Core AI-related modules[m
+[32m+[m[32m- `tests/` — Automated tests[m
+[32m+[m[32m- `lessons/` — Learning exercises[m
+[32m+[m[32m- `data/` — Project data[m
+[32m+[m[32m- `main.py` — Main application entry point[m
+[32m+[m[32m- `hello_ai.py` — Python/AI practice[m
+[32m+[m[32m- `pytest.ini` — Pytest configuration[m
+[32m+[m
+[32m+[m[32m## Validation[m
+[32m+[m
+[32m+[m[32mThe project validates important inputs before processing them.[m
+[32m+[m
+[32m+[m[32mExamples include:[m
+[32m+[m
+[32m+[m[32m- Topic must not be empty.[m
+[32m+[m[32m- Token limits must be valid.[m
+[32m+[m[32m- Structured requests should contain the expected information.[m
+[32m+[m[32m- Invalid input should produce meaningful errors.[m
+[32m+[m
+[32m+[m[32m## Testing[m
+[32m+[m
+[32m+[m[32mTests are implemented using `pytest`.[m
+[32m+[m
+[32m+[m[32mRun the test suite with:[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32mpytest -q[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m## Code Quality[m
+[32m+[m
+[32m+[m[32mRuff is used for Python linting and code-quality checks.[m
+[32m+[m
+[32m+[m[32mRun:[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32mruff check .[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m## Security[m
+[32m+[m
+[32m+[m[32mSensitive files should not be committed to Git.[m
+[32m+[m
+[32m+[m[32mThe `.gitignore` protects:[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32m.venv/[m
+[32m+[m[32m.env[m
+[32m+[m[32m__pycache__/[m
+[32m+[m[32m.ipynb_checkpoints/[m
+[32m+[m[32mdata/private/[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32mAPI keys, passwords, tokens, and private user information should never be stored directly in source code or committed to the repository.[m
+[32m+[m
+[32m+[m[32m## Limitations[m
+[32m+[m
+[32m+[m[32mAI systems can produce incorrect or incomplete results. This project does not assume that an AI model is always correct. Validation, testing, error handling, and human review remain important.[m
+[32m+[m
+[32m+[m[32m## Next Feature[m
+[32m+[m
+[32m+[m[32mThe next feature can extend the validated request into an AI-powered workflow while preserving input validation, testing, and safe handling of sensitive information.[m
+[32m+[m
+[32m+[m[32m## Development Workflow[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32mRequirements[m
+[32m+[m[32m    ↓[m
+[32m+[m[32mAcceptance Criteria[m
+[32m+[m[32m    ↓[m
+[32m+[m[32mTechnical Design[m
+[32m+[m[32m    ↓[m
+[32m+[m[32mImplementation[m
+[32m+[m[32m    ↓[m
+[32m+[m[32mTests[m
+[32m+[m[32m    ↓[m
+[32m+[m[32mDocumentation[m
+[32m+[m[32m    ↓[m
+[32m+[m[32mCode Review[m
+[32m+[m[32m    ↓[m
+[32m+[m[32mRelease[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32m## Author[m
+[32m+[m
+[32m+[m[32mPython AI Mastery Project[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/.gitignore b/ai_core/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6224b1e[m
+[1m--- /dev/null[m
+[1m+++ b/ai_core/.gitignore[m
+[36m@@ -0,0 +1,5 @@[m
+[32m+[m[32m.venv/[m
+[32m+[m[32m.env[m
+[32m+[m[32m__pycache__/[m
+[32m+[m[32m.ipynb_checkpoints/[m
+[32m+[m[32mdata/private/[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/README.md b/ai_core/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5106db8[m
+[1m--- /dev/null[m
+[1m+++ b/ai_core/README.md[m
+[36m@@ -0,0 +1,29 @@[m
+[32m+[m[32m# Python AI Mastery[m
+[32m+[m
+[32m+[m[32mA hands-on Python and AI engineering learning project.[m
+[32m+[m
+[32m+[m[32m## Current Project[m
+[32m+[m
+[32m+[m[32mModular AI Learning Request Builder.[m
+[32m+[m
+[32m+[m[32mThe application validates learner input and model settings, then creates a[m
+[32m+[m[32mstructured LLM request. It does not call a real LLM yet.[m
+[32m+[m
+[32m+[m[32m## Features[m
+[32m+[m
+[32m+[m[32m- Validates topic and learner level[m
+[32m+[m[32m- Validates temperature and token limits[m
+[32m+[m[32m- Builds structured AI request dictionaries[m
+[32m+[m[32m- Uses modular project architecture[m
+[32m+[m[32m- Includes pytest tests[m
+[32m+[m[32m- Uses Ruff for code-quality checks[m
+[32m+[m
+[32m+[m[32m## Architecture[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32mai_core/[m
+[32m+[m[32m├── config.py           # Model configuration validation[m
+[32m+[m[32m├── prompt_builder.py   # Prompt construction[m
+[32m+[m[32m├── request_service.py  # Request orchestration[m
+[32m+[m[32m├── agent_state.py      # Agent memory/state[m
+[32m+[m[32m└── conversation_store.py # JSON persistence[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/agent_state.py b/ai_core/agent_state.py[m
+[1mindex ac76f59..f32601e 100644[m
+[1m--- a/ai_core/agent_state.py[m
+[1m+++ b/ai_core/agent_state.py[m
+[36m@@ -1,108 +1,19 @@[m
+[31m-[m
+ from dataclasses import dataclass, field[m
+[31m-from datetime import datetime, timezone[m
+[31m-from typing import Literal[m
+[31m-[m
+[31m-MessageRole = Literal["system", "user", "assistant"][m
+[31m-[m
+[31m-[m
+[31m-@dataclass[m
+[31m-class ChatMessage:[m
+[31m-    role: MessageRole[m
+[31m-    content: str[m
+[31m-    created_at: datetime = field([m
+[31m-        default_factory=lambda: datetime.now(timezone.utc)[m
+[31m-    )[m
+[31m-[m
+[31m-    def __post_init__(self) -> None:[m
+[31m-        # Remove unnecessary spaces[m
+[31m-        self.content = self.content.strip()[m
+[31m-[m
+[31m-        # Prevent empty messages[m
+[31m-        if not self.content:[m
+[31m-            raise ValueError("Message content cannot be empty.")[m
+ [m
+ [m
+ @dataclass[m
+ class AgentState:[m
+[31m-    name: str[m
+[31m-    messages: list[ChatMessage] = field(default_factory=list)[m
+[31m-    tools_used: list[str] = field(default_factory=list)[m
+[31m-[m
+[31m-    def add_message(self, role: MessageRole, content: str) -> ChatMessage:[m
+[31m-        """Add a new message to the conversation."""[m
+[31m-        message = ChatMessage(role=role, content=content)[m
+[31m-        self.messages.append(message)[m
+[31m-        return message[m
+[31m-[m
+[31m-    def record_tool_use(self, tool_name: str) -> None:[m
+[31m-        """Record a tool used by the agent."""[m
+[31m-        cleaned_tool_name = tool_name.strip()[m
+[31m-[m
+[31m-        if not cleaned_tool_name:[m
+[31m-            raise ValueError("Tool name cannot be empty.")[m
+[31m-[m
+[31m-        self.tools_used.append(cleaned_tool_name)[m
+[31m-[m
+[31m-    def latest_user_message(self) -> ChatMessage | None:[m
+[31m-        """Return the latest user message."""[m
+[31m-        for message in reversed(self.messages):[m
+[31m-            if message.role == "user":[m
+[31m-                return message[m
+[31m-[m
+[31m-        return None[m
+[31m-[m
+[31m-    def clear_conversation(self) -> None:[m
+[31m-        """Remove all conversation messages while preserving agent information."""[m
+[31m-        self.messages.clear()[m
+[31m-[m
+[31m-    def summary(self) -> str:[m
+[31m-        """Return a summary of the current agent state."""[m
+[31m-        latest_message = self.latest_user_message()[m
+[31m-[m
+[31m-        if latest_message is None:[m
+[31m-            latest_question = "No user question yet."[m
+[31m-        else:[m
+[31m-            latest_question = latest_message.content[m
+[31m-[m
+[31m-        return ([m
+[31m-            f"Agent: {self.name}\n"[m
+[31m-            f"Messages: {len(self.messages)}\n"[m
+[31m-            f"Tools used: {self.tools_used or ['None']}\n"[m
+[31m-            f"Latest user message: {latest_question}"[m
+[31m-        )[m
+[31m-[m
+[31m-[m
+[31m-agent = AgentState(name="Python AI Tutor")[m
+[31m-[m
+[31m-[m
+[31m-agent.add_message([m
+[31m-    "system",[m
+[31m-    "You are a helpful Python and AI tutor.",[m
+[31m-)[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-agent.add_message([m
+[31m-    "user",[m
+[31m-    "Explain the difference between RAG and fine-tuning.",[m
+[31m-)[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-agent.record_tool_use("knowledge_search")[m
+[31m-[m
+[31m-print("----- BEFORE CLEARING -----")[m
+[31m-print(agent.summary())[m
+[31m-[m
+[31m-agent.clear_conversation()[m
+[31m-[m
+[31m-print("\n----- AFTER CLEARING -----")[m
+[31m-print(agent.summary())[m
+[31m-[m
+[31m-[m
+[31m-print("\n----- VERIFICATION -----")[m
+[31m-print("Name:", agent.name)[m
+[31m-print("Messages:", agent.messages)[m
+[31m-print("Tools used:", agent.tools_used)[m
+[31m-[m
+[32m+[m[32m    """Maintain the current learning-assistant state."""[m
+[32m+[m
+[32m+[m[32m    topic: str = ""[m
+[32m+[m[32m    level: str = ""[m
+[32m+[m[32m    history: list[dict[str, str]] = field(default_factory=list)[m
+[32m+[m
+[32m+[m[32m    def add_message(self, role: str, content: str) -> None:[m
+[32m+[m[32m        """Add a message to conversation history."""[m
+[32m+[m[32m        self.history.append([m
+[32m+[m[32m            {[m
+[32m+[m[32m                "role": role,[m
+[32m+[m[32m                "content": content,[m
+[32m+[m[32m            }[m
+[32m+[m[32m        )[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/config.py b/ai_core/config.py[m
+[1mindex bf76c76..8b2a635 100644[m
+[1m--- a/ai_core/config.py[m
+[1m+++ b/ai_core/config.py[m
+[36m@@ -1,18 +1,16 @@[m
+[31m-from dataclasses import dataclass[m
+[32m+[m[32mfrom pathlib import Path[m
+ [m
+[32m+[m[32mBASE_DIR = Path(__file__).resolve().parent.parent[m
+ [m
+[31m-@dataclass(frozen=True)[m
+[31m-class ModelConfig:[m
+[31m-    model: str = "demo-llm"[m
+[31m-    temperature: float = 0.5[m
+[31m-    max_tokens: int = 500[m
+[32m+[m[32mDATA_DIR = BASE_DIR / "data"[m
+[32m+[m[32mCONVERSATION_FILE = DATA_DIR / "conversations.json"[m
+[32m+[m[32mDOCUMENT_FILE = DATA_DIR / "documents.json"[m
+ [m
+[31m-    def __post_init__(self) -> None:[m
+[31m-        if not self.model.strip():[m
+[31m-            raise ValueError("Model name cannot be empty.")[m
+[32m+[m[32mMIN_TOPIC_LENGTH = 2[m
+[32m+[m[32mMAX_TOPIC_LENGTH = 100[m
+ [m
+[31m-        if not 0 <= self.temperature <= 2:[m
+[31m-            raise ValueError("Temperature must be between 0 and 2.")[m
+[31m-[m
+[31m-        if not 1 <= self.max_tokens <= 4_000:[m
+[31m-            raise ValueError("max_tokens must be between 1 and 4000.")[m
+\ No newline at end of file[m
+[32m+[m[32mSUPPORTED_LEVELS = {[m
+[32m+[m[32m    "beginner",[m
+[32m+[m[32m    "intermediate",[m
+[32m+[m[32m    "advanced",[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/conversation_store.py b/ai_core/conversation_store.py[m
+[1mindex adf271c..27a062d 100644[m
+[1m--- a/ai_core/conversation_store.py[m
+[1m+++ b/ai_core/conversation_store.py[m
+[36m@@ -1,158 +1,29 @@[m
+[31m-[m
+ import json[m
+[31m-from dataclasses import dataclass, field[m
+[31m-from datetime import datetime, timezone[m
+ from pathlib import Path[m
+[31m-from typing import Literal[m
+[31m-[m
+[31m-MessageRole = Literal["system", "user", "assistant"][m
+[31m-[m
+[31m-[m
+[31m-@dataclass[m
+[31m-class ChatMessage:[m
+[31m-    role: MessageRole[m
+[31m-    content: str[m
+[31m-    created_at: datetime = field([m
+[31m-        default_factory=lambda: datetime.now(timezone.utc)[m
+[31m-    )[m
+[31m-[m
+[31m-    def __post_init__(self) -> None:[m
+[31m-        self.content = self.content.strip()[m
+[31m-[m
+[31m-        if not self.content:[m
+[31m-            raise ValueError("Message content cannot be empty.")[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-@dataclass[m
+[31m-class AgentState:[m
+[31m-    name: str[m
+[31m-    messages: list[ChatMessage] = field(default_factory=list)[m
+[31m-    tools_used: list[str] = field(default_factory=list)[m
+[31m-[m
+[31m-    def add_message([m
+[31m-        self,[m
+[31m-        role: MessageRole,[m
+[31m-        content: str,[m
+[31m-    ) -> ChatMessage:[m
+[31m-        message = ChatMessage([m
+[31m-            role=role,[m
+[31m-            content=content,[m
+[31m-        )[m
+[31m-[m
+[31m-        self.messages.append(message)[m
+[31m-        return message[m
+[31m-[m
+[31m-    def record_tool_use(self, tool_name: str) -> None:[m
+[31m-        cleaned_tool_name = tool_name.strip()[m
+[31m-[m
+[31m-        if not cleaned_tool_name:[m
+[31m-            raise ValueError("Tool name cannot be empty.")[m
+[31m-[m
+[31m-        self.tools_used.append(cleaned_tool_name)[m
+[31m-[m
+[31m-    def latest_user_message(self) -> ChatMessage | None:[m
+[31m-        for message in reversed(self.messages):[m
+[31m-            if message.role == "user":[m
+[31m-                return message[m
+[31m-[m
+[31m-        return None[m
+[31m-[m
+[31m-    def clear_conversation(self) -> None:[m
+[31m-        self.messages.clear()[m
+[31m-[m
+[31m-    def summary(self) -> str:[m
+[31m-        latest_message = self.latest_user_message()[m
+[31m-[m
+[31m-        if latest_message is None:[m
+[31m-            latest_question = "No user question yet."[m
+[31m-        else:[m
+[31m-            latest_question = latest_message.content[m
+[31m-[m
+[31m-        return ([m
+[31m-            f"Agent: {self.name}\n"[m
+[31m-            f"Messages: {len(self.messages)}\n"[m
+[31m-            f"Tools used: {self.tools_used or ['None']}\n"[m
+[31m-            f"Latest user message: {latest_question}"[m
+[31m-        )[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-def save_recent_messages([m
+[31m-    agent: AgentState,[m
+[31m-    file_path: Path,[m
+[31m-    limit: int,[m
+[31m-) -> None:[m
+[31m-[m
+[31m-    if limit < 0:[m
+[31m-        raise ValueError("Limit cannot be negative.")[m
+[31m-[m
+[31m-    [m
+[31m-    recent_messages = agent.messages[-limit:] if limit > 0 else [][m
+[31m-[m
+[31m-    [m
+[31m-    data = [][m
+[31m-[m
+[31m-    for message in recent_messages:[m
+[31m-        data.append([m
+[31m-            {[m
+[31m-                "role": message.role,[m
+[31m-                "content": message.content,[m
+[31m-                "created_at": message.created_at.isoformat(),[m
+[31m-            }[m
+[31m-        )[m
+[31m-[m
+[31m-    # Save the data to JSON[m
+[31m-    with file_path.open("w", encoding="utf-8") as file:[m
+[31m-        json.dump([m
+[31m-            data,[m
+[31m-            file,[m
+[31m-            indent=4,[m
+[31m-        )[m
+[31m-[m
+[31m-[m
+[31m-agent = AgentState(name="Python AI Tutor")[m
+[31m-[m
+[31m-[m
+[31m-agent.add_message("user", "What is Python?")[m
+[31m-agent.add_message("assistant", "Python is a programming language.")[m
+[31m-[m
+[31m-agent.add_message("user", "What is a variable?")[m
+[31m-agent.add_message("assistant", "A variable stores a value.")[m
+[31m-[m
+[31m-agent.add_message("user", "What is a list?")[m
+[31m-agent.add_message("assistant", "A list stores multiple values.")[m
+[31m-[m
+[31m-agent.add_message("user", "What is a tuple?")[m
+[31m-agent.add_message("assistant", "A tuple is an immutable collection.")[m
+[31m-[m
+[31m-agent.add_message("user", "What is a dictionary?")[m
+[31m-agent.add_message([m
+[31m-    "assistant",[m
+[31m-    "A dictionary stores key-value pairs.",[m
+[31m-)[m
+[31m-[m
+[31m-[m
+[31m-print("Total messages:", len(agent.messages))[m
+ [m
+ [m
+[31m-file_path = Path("recent_messages.json")[m
+[32m+[m[32mclass ConversationStore:[m
+[32m+[m[32m    """Persist and load conversation history using JSON."""[m
+ [m
+[31m-save_recent_messages([m
+[31m-    agent=agent,[m
+[31m-    file_path=file_path,[m
+[31m-    limit=3,[m
+[31m-)[m
+[32m+[m[32m    def __init__(self, file_path: Path) -> None:[m
+[32m+[m[32m        self.file_path = file_path[m
+ [m
+[32m+[m[32m    def save(self, history: list[dict[str, str]]) -> None:[m
+[32m+[m[32m        """Save conversation history to JSON."""[m
+[32m+[m[32m        self.file_path.parent.mkdir(parents=True, exist_ok=True)[m
+ [m
+[31m-print(f"Saved recent messages to: {file_path}")[m
+[32m+[m[32m        with self.file_path.open("w", encoding="utf-8") as file:[m
+[32m+[m[32m            json.dump(history, file, indent=4, ensure_ascii=False)[m
+ [m
+[32m+[m[32m    def load(self) -> list[dict[str, str]]:[m
+[32m+[m[32m        """Load conversation history from JSON."""[m
+[32m+[m[32m        if not self.file_path.exists():[m
+[32m+[m[32m            return [][m
+ [m
+[31m-with file_path.open("r", encoding="utf-8") as file:[m
+[31m-    saved_messages = json.load(file)[m
+[32m+[m[32m        with self.file_path.open("r", encoding="utf-8") as file:[m
+[32m+[m[32m            data = json.load(file)[m
+ [m
+[31m-print("\nSaved messages:")[m
+[31m-print(json.dumps(saved_messages, indent=4))[m
+[32m+[m[32m        if not isinstance(data, list):[m
+[32m+[m[32m            raise ValueError("Conversation history must be a JSON list.")[m
+ [m
+[32m+[m[32m        return data[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/data/documents.json b/ai_core/data/documents.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c8b6683[m
+[1m--- /dev/null[m
+[1m+++ b/ai_core/data/documents.json[m
+[36m@@ -0,0 +1,18 @@[m
+[32m+[m[32m[[m
+[32m+[m[32m    {[m
+[32m+[m[32m        "name": "Python Basics",[m
+[32m+[m[32m        "text": "Python variables, data types, loops, functions and basic programming."[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m        "name": "NumPy Fundamentals",[m
+[32m+[m[32m        "text": "NumPy arrays, vectors, matrices, shape, dot product and numerical computing."[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m        "name": "Machine Learning Introduction",[m
+[32m+[m[32m        "text": "Machine learning concepts, datasets, features, models, training and prediction."[m
+[32m+[m[32m    },[m
+[32m+[m[32m    {[m
+[32m+[m[32m        "name": "Natural Language Processing",[m
+[32m+[m[32m        "text": "NLP processes human language using tokenization, text representation and language models."[m
+[32m+[m[32m    }[m
+[32m+[m[32m][m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/main.py b/ai_core/main.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6026761[m
+[1m--- /dev/null[m
+[1m+++ b/ai_core/main.py[m
+[36m@@ -0,0 +1,88 @@[m
+[32m+[m[32mimport numpy as np[m
+[32m+[m
+[32m+[m[32mfrom ai_core.agent_state import AgentState[m
+[32m+[m[32mfrom ai_core.config import CONVERSATION_FILE[m
+[32m+[m[32mfrom ai_core.conversation_store import ConversationStore[m
+[32m+[m[32mfrom ai_core.request_service import RequestService[m
+[32m+[m[32mfrom ai_core.vector_search import find_most_relevant[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef main() -> None:[m
+[32m+[m[32m    """Run the AI Learning Assistant prototype."""[m
+[32m+[m
+[32m+[m[32m    print("=== AI Learning Assistant ===")[m
+[32m+[m
+[32m+[m[32m    topic = input("Enter learning topic: ")[m
+[32m+[m[32m    level = input([m
+[32m+[m[32m        "Enter level (beginner/intermediate/advanced): "[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    request_service = RequestService()[m
+[32m+[m
+[32m+[m[32m    try:[m
+[32m+[m[32m        request = request_service.create_request(topic, level)[m
+[32m+[m[32m    except (TypeError, ValueError) as error:[m
+[32m+[m[32m        print(f"Input error: {error}")[m
+[32m+[m[32m        return[m
+[32m+[m
+[32m+[m[32m    state = AgentState([m
+[32m+[m[32m        topic=request["topic"],[m
+[32m+[m[32m        level=request["level"],[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    state.add_message([m
+[32m+[m[32m        "user",[m
+[32m+[m[32m        request["prompt"],[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    store = ConversationStore(CONVERSATION_FILE)[m
+[32m+[m[32m    store.save(state.history)[m
+[32m+[m
+[32m+[m[32m    vocabulary = [[m
+[32m+[m[32m        "python",[m
+[32m+[m[32m        "numpy",[m
+[32m+[m[32m        "machine",[m
+[32m+[m[32m        "learning",[m
+[32m+[m[32m        "nlp",[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    documents = {[m
+[32m+[m[32m        "Python Basics": [1, 0, 0, 0, 0],[m
+[32m+[m[32m        "NumPy Fundamentals": [0, 1, 0, 0, 0],[m
+[32m+[m[32m        "Machine Learning Introduction": [0, 0, 1, 1, 0],[m
+[32m+[m[32m        "Natural Language Processing": [0, 0, 0, 0, 1],[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    query = request["topic"].lower()[m
+[32m+[m
+[32m+[m[32m    query_vector = np.array([m
+[32m+[m[32m        [[m
+[32m+[m[32m            int(word in query)[m
+[32m+[m[32m            for word in vocabulary[m
+[32m+[m[32m        ],[m
+[32m+[m[32m        dtype=float,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    document_names = list(documents.keys())[m
+[32m+[m[32m    document_vectors = np.array([m
+[32m+[m[32m        list(documents.values()),[m
+[32m+[m[32m        dtype=float,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    most_relevant = find_most_relevant([m
+[32m+[m[32m        query_vector,[m
+[32m+[m[32m        document_vectors,[m
+[32m+[m[32m        document_names,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    print("\nValidated Request:")[m
+[32m+[m[32m    print(request)[m
+[32m+[m
+[32m+[m[32m    print("\nMost Relevant Learning Material:")[m
+[32m+[m[32m    print(most_relevant)[m
+[32m+[m
+[32m+[m[32m    print("\nConversation history saved successfully.")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mif __name__ == "__main__":[m
+[32m+[m[32m    main()[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/project_metadata.py b/ai_core/project_metadata.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b617d53[m
+[1m--- /dev/null[m
+[1m+++ b/ai_core/project_metadata.py[m
+[36m@@ -0,0 +1,18 @@[m
+[32m+[m[32mfrom dataclasses import dataclass[m
+[32m+[m
+[32m+[m
+[32m+[m[32m@dataclass(frozen=True)[m
+[32m+[m[32mclass ProjectMetadata:[m
+[32m+[m[32m    name: str[m
+[32m+[m[32m    version: str[m
+[32m+[m[32m    description: str[m
+[32m+[m[32m    status: str[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef get_project_metadata() -> ProjectMetadata:[m
+[32m+[m[32m    return ProjectMetadata([m
+[32m+[m[32m        name="Python AI Mastery",[m
+[32m+[m[32m        version="0.1.0",[m
+[32m+[m[32m        description="Modular AI learning-request builder.",[m
+[32m+[m[32m        status="Development",[m
+[32m+[m[32m    )[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/prompt_builder.py b/ai_core/prompt_builder.py[m
+[1mindex 66f0504..2dd2d82 100644[m
+[1m--- a/ai_core/prompt_builder.py[m
+[1m+++ b/ai_core/prompt_builder.py[m
+[36m@@ -1,15 +1,55 @@[m
+[31m-def build_tutor_instruction(topic: str, level: str) -> str:[m
+[32m+[m[32mfrom .config import MAX_TOPIC_LENGTH, MIN_TOPIC_LENGTH, SUPPORTED_LEVELS[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef validate_topic(topic: str) -> str:[m
+[32m+[m[32m    """Validate and normalize a learner topic."""[m
+[32m+[m[32m    if not isinstance(topic, str):[m
+[32m+[m[32m        raise TypeError("Topic must be a string.")[m
+[32m+[m
+     cleaned_topic = topic.strip()[m
+[31m-    cleaned_level = level.strip()[m
+ [m
+[31m-    if not cleaned_topic:[m
+[31m-        raise ValueError("Topic cannot be empty.")[m
+[32m+[m[32m    if len(cleaned_topic) < MIN_TOPIC_LENGTH:[m
+[32m+[m[32m        raise ValueError([m
+[32m+[m[32m            f"Topic must contain at least {MIN_TOPIC_LENGTH} characters."[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m    if len(cleaned_topic) > MAX_TOPIC_LENGTH:[m
+[32m+[m[32m        raise ValueError([m
+[32m+[m[32m            f"Topic must not exceed {MAX_TOPIC_LENGTH} characters."[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m    return cleaned_topic[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef validate_level(level: str) -> str:[m
+[32m+[m[32m    """Validate and normalize the learner level."""[m
+[32m+[m[32m    if not isinstance(level, str):[m
+[32m+[m[32m        raise TypeError("Level must be a string.")[m
+[32m+[m
+[32m+[m[32m    cleaned_level = level.strip().lower()[m
+[32m+[m
+[32m+[m[32m    if cleaned_level not in SUPPORTED_LEVELS:[m
+[32m+[m[32m        valid_levels = ", ".join(sorted(SUPPORTED_LEVELS))[m
+[32m+[m[32m        raise ValueError([m
+[32m+[m[32m            f"Invalid level. Choose one of: {valid_levels}."[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m    return cleaned_level[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef build_ai_request(topic: str, level: str) -> dict[str, str]:[m
+[32m+[m[32m    """Build a validated AI request for future LLM integration."""[m
+[32m+[m[32m    validated_topic = validate_topic(topic)[m
+[32m+[m[32m    validated_level = validate_level(level)[m
+ [m
+[31m-    if not cleaned_level:[m
+[31m-        raise ValueError("Level cannot be empty.")[m
+[32m+[m[32m    prompt = ([m
+[32m+[m[32m        f"Teach me about {validated_topic}. "[m
+[32m+[m[32m        f"My learning level is {validated_level}. "[m
+[32m+[m[32m        "Explain the concept clearly with examples and practical guidance."[m
+[32m+[m[32m    )[m
+ [m
+[31m-    return ([m
+[31m-        "You are a helpful Python and AI tutor. "[m
+[31m-        f"Explain {cleaned_topic} for a {cleaned_level} learner. "[m
+[31m-        "Use plain language and one practical example."[m
+[31m-    )[m
+\ No newline at end of file[m
+[32m+[m[32m    return {[m
+[32m+[m[32m        "topic": validated_topic,[m
+[32m+[m[32m        "level": validated_level,[m
+[32m+[m[32m        "prompt": prompt,[m
+[32m+[m[32m    }[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/request_service.py b/ai_core/request_service.py[m
+[1mindex f9a5a85..3eb15a1 100644[m
+[1m--- a/ai_core/request_service.py[m
+[1m+++ b/ai_core/request_service.py[m
+[36m@@ -1,64 +1,9 @@[m
+[31m-from typing import Any[m
+[32m+[m[32mfrom .prompt_builder import build_ai_request[m
+ [m
+[31m-from ai_core.config import ModelConfig[m
+[31m-from ai_core.prompt_builder import build_tutor_instruction[m
+ [m
+[32m+[m[32mclass RequestService:[m
+[32m+[m[32m    """Service responsible for preparing learner AI requests."""[m
+ [m
+[31m-def create_learning_request([m
+[31m-    topic: str,[m
+[31m-    level: str,[m
+[31m-    config: ModelConfig,[m
+[31m-) -> dict[str, Any]:[m
+[31m-    """Create a learning request using a ModelConfig."""[m
+[31m-[m
+[31m-    instruction = build_tutor_instruction(topic, level)[m
+[31m-[m
+[31m-    return {[m
+[31m-        "model": config.model,[m
+[31m-        "temperature": config.temperature,[m
+[31m-        "max_tokens": config.max_tokens,[m
+[31m-        "messages": [[m
+[31m-            {[m
+[31m-                "role": "system",[m
+[31m-                "content": instruction,[m
+[31m-            },[m
+[31m-            {[m
+[31m-                "role": "user",[m
+[31m-                "content": f"Teach me about {topic.strip()}.",[m
+[31m-            },[m
+[31m-        ],[m
+[31m-    }[m
+[31m-[m
+[31m-[m
+[31m-def build_learning_request([m
+[31m-    topic: str,[m
+[31m-    level: str,[m
+[31m-    model: str = "gpt-4o-mini",[m
+[31m-    temperature: float = 0.7,[m
+[31m-    max_tokens: int = 500,[m
+[31m-) -> dict[str, Any]:[m
+[31m-    """Build a learning request with direct model configuration."""[m
+[31m-[m
+[31m-    if not isinstance(topic, str) or not topic.strip():[m
+[31m-        raise ValueError("topic cannot be empty")[m
+[31m-[m
+[31m-    if not isinstance(level, str) or not level.strip():[m
+[31m-        raise ValueError("level cannot be empty")[m
+[31m-[m
+[31m-    if not isinstance(temperature, (int, float)) or not 0 <= temperature <= 2:[m
+[31m-        raise ValueError("temperature must be between 0 and 2")[m
+[31m-[m
+[31m-    if not isinstance(max_tokens, int) or not 1 <= max_tokens <= 4096:[m
+[31m-        raise ValueError("max_tokens must be between 1 and 4096")[m
+[31m-[m
+[31m-    config = ModelConfig([m
+[31m-        model=model,[m
+[31m-        temperature=temperature,[m
+[31m-        max_tokens=max_tokens,[m
+[31m-    )[m
+[31m-[m
+[31m-    return create_learning_request([m
+[31m-        topic=topic,[m
+[31m-        level=level,[m
+[31m-        config=config,[m
+[31m-    )[m
+\ No newline at end of file[m
+[32m+[m[32m    def create_request(self, topic: str, level: str) -> dict[str, str]:[m
+[32m+[m[32m        """Create a validated AI request."""[m
+[32m+[m[32m        return build_ai_request(topic, level)[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/requirements.txt b/ai_core/requirements.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0f0f7cb[m
+[1m--- /dev/null[m
+[1m+++ b/ai_core/requirements.txt[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32mnumpy[m
+[32m+[m[32mpytest[m
+[32m+[m[32mruff[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/tests/test_conversation_store.py b/ai_core/tests/test_conversation_store.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5f2a9d3[m
+[1m--- /dev/null[m
+[1m+++ b/ai_core/tests/test_conversation_store.py[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32mimport json[m
+[32m+[m[32mfrom pathlib import Path[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass ConversationStore:[m
+[32m+[m[32m    """Persist and load conversation history using JSON."""[m
+[32m+[m
+[32m+[m[32m    def __init__(self, file_path: Path) -> None:[m
+[32m+[m[32m        self.file_path = file_path[m
+[32m+[m
+[32m+[m[32m    def save(self, history: list[dict[str, str]]) -> None:[m
+[32m+[m[32m        """Save conversation history to a JSON file."""[m
+[32m+[m[32m        self.file_path.parent.mkdir(parents=True, exist_ok=True)[m
+[32m+[m
+[32m+[m[32m        with self.file_path.open("w", encoding="utf-8") as file:[m
+[32m+[m[32m            json.dump([m
+[32m+[m[32m                history,[m
+[32m+[m[32m                file,[m
+[32m+[m[32m                indent=4,[m
+[32m+[m[32m                ensure_ascii=False,[m
+[32m+[m[32m            )[m
+[32m+[m
+[32m+[m[32m    def load(self) -> list[dict[str, str]]:[m
+[32m+[m[32m        """Load conversation history from a JSON file."""[m
+[32m+[m[32m        if not self.file_path.exists():[m
+[32m+[m[32m            return [][m
+[32m+[m
+[32m+[m[32m        with self.file_path.open("r", encoding="utf-8") as file:[m
+[32m+[m[32m            data = json.load(file)[m
+[32m+[m
+[32m+[m[32m        if not isinstance(data, list):[m
+[32m+[m[32m            raise TypeError([m
+[32m+[m[32m                "Conversation history must be a JSON list."[m
+[32m+[m[32m            )[m
+[32m+[m
+[32m+[m[32m        return data[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/tests/test_prompt_builder.py b/ai_core/tests/test_prompt_builder.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c5d096e[m
+[1m--- /dev/null[m
+[1m+++ b/ai_core/tests/test_prompt_builder.py[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32mimport pytest[m
+[32m+[m
+[32m+[m[32mfrom ai_core.prompt_builder import ([m
+[32m+[m[32m    build_ai_request,[m
+[32m+[m[32m    validate_level,[m
+[32m+[m[32m    validate_topic,[m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_valid_topic() -> None:[m
+[32m+[m[32m    assert validate_topic("Python") == "Python"[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_topic_is_trimmed() -> None:[m
+[32m+[m[32m    assert validate_topic("  Python  ") == "Python"[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_empty_topic_fails() -> None:[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        validate_topic("")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_invalid_level_fails() -> None:[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        validate_level("expert")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_valid_request() -> None:[m
+[32m+[m[32m    request = build_ai_request([m
+[32m+[m[32m        "NumPy",[m
+[32m+[m[32m        "beginner",[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert request["topic"] == "NumPy"[m
+[32m+[m[32m    assert request["level"] == "beginner"[m
+[32m+[m[32m    assert "NumPy" in request["prompt"][m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/tests/test_request_service.py b/ai_core/tests/test_request_service.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..89d105c[m
+[1m--- /dev/null[m
+[1m+++ b/ai_core/tests/test_request_service.py[m
+[36m@@ -0,0 +1,86 @@[m
+[32m+[m[32mimport pytest[m
+[32m+[m
+[32m+[m[32mfrom ai_core.request_service import RequestService[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_create_valid_request() -> None:[m
+[32m+[m[32m    """Test that a valid AI request is created."""[m
+[32m+[m[32m    service = RequestService()[m
+[32m+[m
+[32m+[m[32m    result = service.create_request([m
+[32m+[m[32m        "Python",[m
+[32m+[m[32m        "beginner",[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert result["topic"] == "Python"[m
+[32m+[m[32m    assert result["level"] == "beginner"[m
+[32m+[m[32m    assert "Python" in result["prompt"][m
+[32m+[m[32m    assert "beginner" in result["prompt"][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_create_request_strips_topic_whitespace() -> None:[m
+[32m+[m[32m    """Test that whitespace around the topic is removed."""[m
+[32m+[m[32m    service = RequestService()[m
+[32m+[m
+[32m+[m[32m    result = service.create_request([m
+[32m+[m[32m        "  NumPy  ",[m
+[32m+[m[32m        "beginner",[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert result["topic"] == "NumPy"[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_create_request_normalizes_level() -> None:[m
+[32m+[m[32m    """Test that the learner level is converted to lowercase."""[m
+[32m+[m[32m    service = RequestService()[m
+[32m+[m
+[32m+[m[32m    result = service.create_request([m
+[32m+[m[32m        "Machine Learning",[m
+[32m+[m[32m        "BEGINNER",[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert result["level"] == "beginner"[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_invalid_topic_raises_value_error() -> None:[m
+[32m+[m[32m    """Test that an invalid topic raises ValueError."""[m
+[32m+[m[32m    service = RequestService()[m
+[32m+[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        service.create_request([m
+[32m+[m[32m            "",[m
+[32m+[m[32m            "beginner",[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_invalid_level_raises_value_error() -> None:[m
+[32m+[m[32m    """Test that an invalid level raises ValueError."""[m
+[32m+[m[32m    service = RequestService()[m
+[32m+[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        service.create_request([m
+[32m+[m[32m            "Python",[m
+[32m+[m[32m            "expert",[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_invalid_topic_type_raises_type_error() -> None:[m
+[32m+[m[32m    """Test that a non-string topic raises TypeError."""[m
+[32m+[m[32m    service = RequestService()[m
+[32m+[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        service.create_request([m
+[32m+[m[32m            123,  # type: ignore[arg-type][m
+[32m+[m[32m            "beginner",[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_invalid_level_type_raises_type_error() -> None:[m
+[32m+[m[32m    """Test that a non-string level raises TypeError."""[m
+[32m+[m[32m    service = RequestService()[m
+[32m+[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        service.create_request([m
+[32m+[m[32m            "Python",[m
+[32m+[m[32m            123,  # type: ignore[arg-type][m
+[32m+[m[32m        )[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/tests/test_vector_search.py b/ai_core/tests/test_vector_search.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..87b244c[m
+[1m--- /dev/null[m
+[1m+++ b/ai_core/tests/test_vector_search.py[m
+[36m@@ -0,0 +1,66 @@[m
+[32m+[m[32mimport numpy as np[m
+[32m+[m
+[32m+[m[32mfrom ai_core.vector_search import ([m
+[32m+[m[32m    cosine_similarity,[m
+[32m+[m[32m    find_most_relevant,[m
+[32m+[m[32m    rank_documents,[m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_cosine_similarity() -> None:[m
+[32m+[m[32m    vector_a = np.array([1.0, 0.0])[m
+[32m+[m[32m    vector_b = np.array([1.0, 0.0])[m
+[32m+[m
+[32m+[m[32m    assert cosine_similarity(vector_a, vector_b) == 1.0[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_documents_are_ranked() -> None:[m
+[32m+[m[32m    query = np.array([1.0, 0.0])[m
+[32m+[m
+[32m+[m[32m    documents = np.array([m
+[32m+[m[32m        [[m
+[32m+[m[32m            [1.0, 0.0],[m
+[32m+[m[32m            [0.0, 1.0],[m
+[32m+[m[32m            [0.5, 0.5],[m
+[32m+[m[32m        ][m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    names = [[m
+[32m+[m[32m        "Document A",[m
+[32m+[m[32m        "Document B",[m
+[32m+[m[32m        "Document C",[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    results = rank_documents([m
+[32m+[m[32m        query,[m
+[32m+[m[32m        documents,[m
+[32m+[m[32m        names,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert results[0][0] == "Document A"[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_most_relevant_document() -> None:[m
+[32m+[m[32m    query = np.array([0.0, 1.0])[m
+[32m+[m
+[32m+[m[32m    documents = np.array([m
+[32m+[m[32m        [[m
+[32m+[m[32m            [1.0, 0.0],[m
+[32m+[m[32m            [0.0, 1.0],[m
+[32m+[m[32m            [0.5, 0.5],[m
+[32m+[m[32m        ][m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    names = [[m
+[32m+[m[32m        "Python",[m
+[32m+[m[32m        "NumPy",[m
+[32m+[m[32m        "Machine Learning",[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    result = find_most_relevant([m
+[32m+[m[32m        query,[m
+[32m+[m[32m        documents,[m
+[32m+[m[32m        names,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert result == "NumPy"[m
+\ No newline at end of file[m
+[1mdiff --git a/ai_core/vector_search.py b/ai_core/vector_search.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..21508a5[m
+[1m--- /dev/null[m
+[1m+++ b/ai_core/vector_search.py[m
+[36m@@ -0,0 +1,60 @@[m
+[32m+[m[32mimport numpy as np[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef cosine_similarity([m
+[32m+[m[32m    query_vector: np.ndarray,[m
+[32m+[m[32m    document_vector: np.ndarray,[m
+[32m+[m[32m) -> float:[m
+[32m+[m[32m    """Calculate cosine similarity between two vectors."""[m
+[32m+[m[32m    query_norm = np.linalg.norm(query_vector)[m
+[32m+[m[32m    document_norm = np.linalg.norm(document_vector)[m
+[32m+[m
+[32m+[m[32m    if query_norm == 0 or document_norm == 0:[m
+[32m+[m[32m        return 0.0[m
+[32m+[m
+[32m+[m[32m    return float([m
+[32m+[m[32m        np.dot(query_vector, document_vector)[m
+[32m+[m[32m        / (query_norm * document_norm)[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef rank_documents([m
+[32m+[m[32m    query_vector: np.ndarray,[m
+[32m+[m[32m    document_vectors: np.ndarray,[m
+[32m+[m[32m    document_names: list[str],[m
+[32m+[m[32m) -> list[tuple[str, float]]:[m
+[32m+[m[32m    """Rank documents by cosine similarity."""[m
+[32m+[m[32m    if len(document_vectors) != len(document_names):[m
+[32m+[m[32m        raise ValueError([m
+[32m+[m[32m            "Document vectors and names must have the same length."[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m    results = [][m
+[32m+[m
+[32m+[m[32m    for name, vector in zip(document_names, document_vectors):[m
+[32m+[m[32m        score = cosine_similarity(query_vector, vector)[m
+[32m+[m[32m        results.append((name, score))[m
+[32m+[m
+[32m+[m[32m    return sorted([m
+[32m+[m[32m        results,[m
+[32m+[m[32m        key=lambda item: item[1],[m
+[32m+[m[32m        reverse=True,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef find_most_relevant([m
+[32m+[m[32m    query_vector: np.ndarray,[m
+[32m+[m[32m    document_vectors: np.ndarray,[m
+[32m+[m[32m    document_names: list[str],[m
+[32m+[m[32m) -> str:[m
+[32m+[m[32m    """Return the name of the most relevant document."""[m
+[32m+[m[32m    ranked = rank_documents([m
+[32m+[m[32m        query_vector,[m
+[32m+[m[32m        document_vectors,[m
+[32m+[m[32m        document_names,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    if not ranked:[m
+[32m+[m[32m        raise ValueError("No documents available.")[m
+[32m+[m
+[32m+[m[32m    return ranked[0][0][m
+\ No newline at end of file[m
+[1mdiff --git a/day-26-combination-sum/README.md b/day-26-combination-sum/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2dfd6ef[m
+[1m--- /dev/null[m
+[1m+++ b/day-26-combination-sum/README.md[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m# Day 26 — Budget Package Builder[m
+[32m+[m
+[32m+[m[32m## 1. Project Overview[m
+[32m+[m
+[32m+[m[32mA client provides a list of service prices and a target budget.[m
+[32m+[m
+[32m+[m[32mThe system must find every combination of services whose total price[m
+[32m+[m[32mis exactly equal to the budget.[m
+[32m+[m
+[32m+[m[32mThe same service can be selected more than once.[m
+[32m+[m
+[32m+[m[32mExample:[m
+[32m+[m
+[32m+[m[32m```python[m
+[32m+[m[32mprices = [200, 300, 600, 700][m
+[32m+[m[32mbudget = 700[m
+\ No newline at end of file[m
+[1mdiff --git a/day-26-combination-sum/assignment.py b/day-26-combination-sum/assignment.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ee4e1db[m
+[1m--- /dev/null[m
+[1m+++ b/day-26-combination-sum/assignment.py[m
+[36m@@ -0,0 +1,141 @@[m
+[32m+[m[32m"""Budget package builder using backtracking."""[m
+[32m+[m
+[32m+[m[32mfrom __future__ import annotations[m
+[32m+[m
+[32m+[m[32mimport logging[m
+[32m+[m[32mfrom time import perf_counter[m
+[32m+[m
+[32m+[m[32mDEFAULT_MAX_RESULTS = 1000[m
+[32m+[m
+[32m+[m[32mlogger = logging.getLogger(__name__)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef _validate_inputs([m
+[32m+[m[32m    prices: list[int],[m
+[32m+[m[32m    budget: int,[m
+[32m+[m[32m    max_results: int,[m
+[32m+[m[32m) -> None:[m
+[32m+[m[32m    """Validate build_packages inputs.[m
+[32m+[m
+[32m+[m[32m    Args:[m
+[32m+[m[32m        prices: List of unique positive integer prices.[m
+[32m+[m[32m        budget: Target budget.[m
+[32m+[m[32m        max_results: Maximum number of packages allowed.[m
+[32m+[m
+[32m+[m[32m    Raises:[m
+[32m+[m[32m        TypeError: If an argument has an invalid type.[m
+[32m+[m[32m        ValueError: If an argument has an invalid value.[m
+[32m+[m[32m    """[m
+[32m+[m[32m    if type(prices) is not list:[m
+[32m+[m[32m        raise TypeError("prices must be a list")[m
+[32m+[m
+[32m+[m[32m    if type(budget) is not int:[m
+[32m+[m[32m        raise TypeError("budget must be an integer")[m
+[32m+[m
+[32m+[m[32m    if type(max_results) is not int:[m
+[32m+[m[32m        raise TypeError("max_results must be an integer")[m
+[32m+[m
+[32m+[m[32m    if budget < 0:[m
+[32m+[m[32m        raise ValueError("budget must be non-negative")[m
+[32m+[m
+[32m+[m[32m    if max_results <= 0:[m
+[32m+[m[32m        raise ValueError("max_results must be positive")[m
+[32m+[m
+[32m+[m[32m    for price in prices:[m
+[32m+[m[32m        if type(price) is not int:[m
+[32m+[m[32m            raise TypeError("every price must be an integer")[m
+[32m+[m
+[32m+[m[32m        if price <= 0:[m
+[32m+[m[32m            raise ValueError("every price must be positive")[m
+[32m+[m
+[32m+[m[32m    if len(prices) != len(set(prices)):[m
+[32m+[m[32m        raise ValueError("prices must contain unique values")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef build_packages([m
+[32m+[m[32m    prices: list[int],[m
+[32m+[m[32m    budget: int,[m
+[32m+[m[32m    max_results: int = DEFAULT_MAX_RESULTS,[m
+[32m+[m[32m) -> list[list[int]]:[m
+[32m+[m[32m    """Return packages whose prices total exactly to budget.[m
+[32m+[m
+[32m+[m[32m    The same price can be selected multiple times.[m
+[32m+[m
+[32m+[m[32m    Args:[m
+[32m+[m[32m        prices: Unique positive integer prices.[m
+[32m+[m[32m        budget: Target budget.[m
+[32m+[m[32m        max_results: Maximum number of packages to return.[m
+[32m+[m
+[32m+[m[32m    Returns:[m
+[32m+[m[32m        A list of packages. Each package contains prices whose[m
+[32m+[m[32m        sum is exactly equal to budget.[m
+[32m+[m
+[32m+[m[32m    Raises:[m
+[32m+[m[32m        TypeError: If the input types are invalid.[m
+[32m+[m[32m        ValueError: If prices are invalid, budget is negative,[m
+[32m+[m[32m            or max_results is not positive.[m
+[32m+[m[32m    """[m
+[32m+[m[32m    _validate_inputs(prices, budget, max_results)[m
+[32m+[m
+[32m+[m[32m    # Copy and sort so the caller's list is never modified.[m
+[32m+[m[32m    sorted_prices = sorted(prices)[m
+[32m+[m
+[32m+[m[32m    results: list[list[int]] = [][m
+[32m+[m[32m    path: list[int] = [][m
+[32m+[m
+[32m+[m[32m    def backtrack(start: int, remaining: int) -> None:[m
+[32m+[m[32m        """Explore valid package combinations recursively."""[m
+[32m+[m
+[32m+[m[32m        # Stop if maximum result protection is reached.[m
+[32m+[m[32m        if len(results) >= max_results:[m
+[32m+[m[32m            return[m
+[32m+[m
+[32m+[m[32m        # Exact budget reached.[m
+[32m+[m[32m        if remaining == 0:[m
+[32m+[m[32m            results.append(path.copy())[m
+[32m+[m[32m            return[m
+[32m+[m
+[32m+[m[32m        for index in range(start, len(sorted_prices)):[m
+[32m+[m[32m            price = sorted_prices[index][m
+[32m+[m
+[32m+[m[32m            # Since prices are sorted and all prices are positive,[m
+[32m+[m[32m            # all later prices will also be too large.[m
+[32m+[m[32m            if price > remaining:[m
+[32m+[m[32m                break[m
+[32m+[m
+[32m+[m[32m            path.append(price)[m
+[32m+[m
+[32m+[m[32m            # Pass the same index because the current service[m
+[32m+[m[32m            # may be selected again.[m
+[32m+[m[32m            backtrack([m
+[32m+[m[32m                index,[m
+[32m+[m[32m                remaining - price,[m
+[32m+[m[32m            )[m
+[32m+[m
+[32m+[m[32m            # Backtrack.[m
+[32m+[m[32m            path.pop()[m
+[32m+[m
+[32m+[m[32m            if len(results) >= max_results:[m
+[32m+[m[32m                return[m
+[32m+[m
+[32m+[m[32m    start_time = perf_counter()[m
+[32m+[m
+[32m+[m[32m    # Logging is performed only at the service boundary.[m
+[32m+[m[32m    logger.info([m
+[32m+[m[32m        "Building budget packages: price_count=%d budget=%d max_results=%d",[m
+[32m+[m[32m        len(prices),[m
+[32m+[m[32m        budget,[m
+[32m+[m[32m        max_results,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    backtrack(0, budget)[m
+[32m+[m
+[32m+[m[32m    duration = perf_counter() - start_time[m
+[32m+[m
+[32m+[m[32m    logger.info([m
+[32m+[m[32m        "Budget package search completed: result_count=%d duration=%.6fs",[m
+[32m+[m[32m        len(results),[m
+[32m+[m[32m        duration,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    return results[m
+\ No newline at end of file[m
+[1mdiff --git a/day-26-combination-sum/day_26_combination_sum.py b/day-26-combination-sum/day_26_combination_sum.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..df0d4fd[m
+[1m--- /dev/null[m
+[1m+++ b/day-26-combination-sum/day_26_combination_sum.py[m
+[36m@@ -0,0 +1,32 @@[m
+[32m+[m[32mdef combination_sum(candidates, target):[m
+[32m+[m[32m    numbers = sorted(candidates)[m
+[32m+[m[32m    result = [][m
+[32m+[m[32m    path = [][m
+[32m+[m
+[32m+[m[32m    def backtrack(start, remaining):[m
+[32m+[m[32m        # A valid combination is complete[m
+[32m+[m[32m        if remaining == 0:[m
+[32m+[m[32m            result.append(path.copy())[m
+[32m+[m[32m            return[m
+[32m+[m
+[32m+[m[32m        for index in range(start, len(numbers)):[m
+[32m+[m[32m            number = numbers[index][m
+[32m+[m
+[32m+[m[32m            # This and every later number are too large[m
+[32m+[m[32m            if number > remaining:[m
+[32m+[m[32m                break[m
+[32m+[m
+[32m+[m[32m            # Choose[m
+[32m+[m[32m            path.append(number)[m
+[32m+[m
+[32m+[m[32m            # Explore: same index allows reuse[m
+[32m+[m[32m            backtrack(index, remaining - number)[m
+[32m+[m
+[32m+[m[32m            # Undo[m
+[32m+[m[32m            path.pop()[m
+[32m+[m
+[32m+[m[32m    backtrack(0, target)[m
+[32m+[m[32m    return result[m
+[32m+[m
+[32m+[m
+[32m+[m[32mprint(combination_sum([2, 3, 6, 7], 7))[m
+\ No newline at end of file[m
+[1mdiff --git a/day-26-combination-sum/test_assignment.py b/day-26-combination-sum/test_assignment.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9005cd5[m
+[1m--- /dev/null[m
+[1m+++ b/day-26-combination-sum/test_assignment.py[m
+[36m@@ -0,0 +1,168 @@[m
+[32m+[m[32m"""Unit tests for the budget package builder."""[m
+[32m+[m
+[32m+[m[32mimport pytest[m
+[32m+[m
+[32m+[m[32mfrom assignment import build_packages[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_expected_packages() -> None:[m
+[32m+[m[32m    """The example input should return the expected packages."""[m
+[32m+[m[32m    prices = [200, 300, 600, 700][m
+[32m+[m[32m    budget = 700[m
+[32m+[m
+[32m+[m[32m    result = build_packages(prices, budget)[m
+[32m+[m
+[32m+[m[32m    assert result == [[m
+[32m+[m[32m        [200, 200, 300],[m
+[32m+[m[32m        [700],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_no_solution() -> None:[m
+[32m+[m[32m    """Return an empty list when no package reaches the budget."""[m
+[32m+[m[32m    result = build_packages([200], 600)[m
+[32m+[m
+[32m+[m[32m    assert result == [][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_no_solution_with_smaller_prices() -> None:[m
+[32m+[m[32m    """Return an empty list when no combination exists."""[m
+[32m+[m[32m    result = build_packages([400, 600], 500)[m
+[32m+[m
+[32m+[m[32m    assert result == [][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_empty_prices() -> None:[m
+[32m+[m[32m    """An empty price list should return no packages."""[m
+[32m+[m[32m    result = build_packages([], 700)[m
+[32m+[m
+[32m+[m[32m    assert result == [][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_zero_price_rejected() -> None:[m
+[32m+[m[32m    """Zero prices must be rejected."""[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        build_packages([200, 0], 700)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_negative_price_rejected() -> None:[m
+[32m+[m[32m    """Negative prices must be rejected."""[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        build_packages([200, -100], 700)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_duplicate_prices_rejected() -> None:[m
+[32m+[m[32m    """Duplicate price values must be rejected."""[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        build_packages([200, 200], 700)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_zero_budget() -> None:[m
+[32m+[m[32m    """Zero budget should return one empty package."""[m
+[32m+[m[32m    result = build_packages([200, 300], 0)[m
+[32m+[m
+[32m+[m[32m    assert result == [[]][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_every_result_has_correct_sum() -> None:[m
+[32m+[m[32m    """Every returned package must equal the budget."""[m
+[32m+[m[32m    prices = [200, 300, 600, 700][m
+[32m+[m[32m    budget = 700[m
+[32m+[m
+[32m+[m[32m    result = build_packages(prices, budget)[m
+[32m+[m
+[32m+[m[32m    for package in result:[m
+[32m+[m[32m        assert sum(package) == budget[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_no_duplicate_combinations() -> None:[m
+[32m+[m[32m    """No reordered or duplicate packages should be returned."""[m
+[32m+[m[32m    result = build_packages([2, 3, 5], 8)[m
+[32m+[m
+[32m+[m[32m    normalized = {[m
+[32m+[m[32m        tuple(package)[m
+[32m+[m[32m        for package in result[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    assert len(normalized) == len(result)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_original_list_is_not_modified() -> None:[m
+[32m+[m[32m    """The caller's prices list must remain unchanged."""[m
+[32m+[m[32m    prices = [700, 200, 600, 300][m
+[32m+[m[32m    original = prices.copy()[m
+[32m+[m
+[32m+[m[32m    build_packages(prices, 700)[m
+[32m+[m
+[32m+[m[32m    assert prices == original[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_result_packages_are_sorted() -> None:[m
+[32m+[m[32m    """Each package should be generated in sorted order."""[m
+[32m+[m[32m    result = build_packages([2, 3, 5], 8)[m
+[32m+[m
+[32m+[m[32m    for package in result:[m
+[32m+[m[32m        assert package == sorted(package)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_prices_must_be_a_list() -> None:[m
+[32m+[m[32m    """prices must be a list."""[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        build_packages((200, 300), 500)  # type: ignore[arg-type][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_budget_must_be_an_integer() -> None:[m
+[32m+[m[32m    """budget must be an integer."""[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        build_packages([200, 300], "500")  # type: ignore[arg-type][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_budget_cannot_be_negative() -> None:[m
+[32m+[m[32m    """Negative budgets must be rejected."""[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        build_packages([200, 300], -100)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_price_must_be_integer() -> None:[m
+[32m+[m[32m    """Every price must be an integer."""[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        build_packages([200, 300.5], 500)  # type: ignore[list-item][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_max_results_must_be_positive() -> None:[m
+[32m+[m[32m    """max_results must be greater than zero."""[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        build_packages([200, 300], 500, max_results=0)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_max_results_limit() -> None:[m
+[32m+[m[32m    """The number of returned packages must respect max_results."""[m
+[32m+[m[32m    result = build_packages([m
+[32m+[m[32m        [2, 3, 5],[m
+[32m+[m[32m        10,[m
+[32m+[m[32m        max_results=2,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert len(result) <= 2[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_boolean_budget_rejected() -> None:[m
+[32m+[m[32m    """Boolean budget values must be rejected."""[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        build_packages([200, 300], True)  # type: ignore[arg-type][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_boolean_price_rejected() -> None:[m
+[32m+[m[32m    """Boolean prices must be rejected."""[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        build_packages([True, 300], 500)  # type: ignore[list-item][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_boolean_max_results_rejected() -> None:[m
+[32m+[m[32m    """Boolean max_results must be rejected."""[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        build_packages([m
+[32m+[m[32m            [200, 300],[m
+[32m+[m[32m            500,[m
+[32m+[m[32m            max_results=True,  # type: ignore[arg-type][m
+[32m+[m[32m        )[m
+\ No newline at end of file[m
+[1mdiff --git a/day-27-combination-sum-ii/README.md b/day-27-combination-sum-ii/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..230bf97[m
+[1m--- /dev/null[m
+[1m+++ b/day-27-combination-sum-ii/README.md[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32m# Day 27 — One-Time Coupon Bundle Builder[m
+[32m+[m
+[32m+[m[32m## 1. Project Overview[m
+[32m+[m
+[32m+[m[32mA customer owns several physical coupon cards.[m
+[32m+[m
+[32m+[m[32mEach coupon can be used at most once.[m
+[32m+[m
+[32m+[m[32mThe goal is to find every unique combination of coupons whose total[m
+[32m+[m[32mdiscount exactly matches the target discount.[m
+[32m+[m
+[32m+[m[32mExample:[m
+[32m+[m
+[32m+[m[32m```python[m
+[32m+[m[32mcoupons = [1000, 100, 200, 700, 600, 100, 500][m
+[32m+[m[32mtarget_discount = 800[m
+\ No newline at end of file[m
+[1mdiff --git a/day-27-combination-sum-ii/assignment.py b/day-27-combination-sum-ii/assignment.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ad6a1b3[m
+[1m--- /dev/null[m
+[1m+++ b/day-27-combination-sum-ii/assignment.py[m
+[36m@@ -0,0 +1,174 @@[m
+[32m+[m[32m"""One-time coupon bundle builder using backtracking."""[m
+[32m+[m
+[32m+[m[32mfrom __future__ import annotations[m
+[32m+[m
+[32m+[m[32mimport logging[m
+[32m+[m[32mfrom time import perf_counter[m
+[32m+[m
+[32m+[m[32mDEFAULT_MAX_RESULTS = 1000[m
+[32m+[m[32mDEFAULT_MAX_COUPONS = 100[m
+[32m+[m
+[32m+[m[32mlogger = logging.getLogger(__name__)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef _validate_inputs([m
+[32m+[m[32m    coupons: list[int],[m
+[32m+[m[32m    target_discount: int,[m
+[32m+[m[32m    max_results: int,[m
+[32m+[m[32m    max_coupons: int,[m
+[32m+[m[32m) -> None:[m
+[32m+[m[32m    """Validate coupon bundle inputs.[m
+[32m+[m
+[32m+[m[32m    Args:[m
+[32m+[m[32m        coupons: List of positive integer coupon values.[m
+[32m+[m[32m        target_discount: Required total discount.[m
+[32m+[m[32m        max_results: Maximum number of bundles to return.[m
+[32m+[m[32m        max_coupons: Maximum number of input coupons allowed.[m
+[32m+[m
+[32m+[m[32m    Raises:[m
+[32m+[m[32m        TypeError: If an argument has an invalid type.[m
+[32m+[m[32m        ValueError: If an argument has an invalid value.[m
+[32m+[m[32m    """[m
+[32m+[m[32m    if type(coupons) is not list:[m
+[32m+[m[32m        raise TypeError("coupons must be a list")[m
+[32m+[m
+[32m+[m[32m    if type(target_discount) is not int:[m
+[32m+[m[32m        raise TypeError("target_discount must be an integer")[m
+[32m+[m
+[32m+[m[32m    if type(max_results) is not int:[m
+[32m+[m[32m        raise TypeError("max_results must be an integer")[m
+[32m+[m
+[32m+[m[32m    if type(max_coupons) is not int:[m
+[32m+[m[32m        raise TypeError("max_coupons must be an integer")[m
+[32m+[m
+[32m+[m[32m    if target_discount < 0:[m
+[32m+[m[32m        raise ValueError("target_discount must be non-negative")[m
+[32m+[m
+[32m+[m[32m    if max_results <= 0:[m
+[32m+[m[32m        raise ValueError("max_results must be positive")[m
+[32m+[m
+[32m+[m[32m    if max_coupons <= 0:[m
+[32m+[m[32m        raise ValueError("max_coupons must be positive")[m
+[32m+[m
+[32m+[m[32m    if len(coupons) > max_coupons:[m
+[32m+[m[32m        raise ValueError([m
+[32m+[m[32m            f"number of coupons must not exceed {max_coupons}"[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m    for coupon in coupons:[m
+[32m+[m[32m        if type(coupon) is not int:[m
+[32m+[m[32m            raise TypeError([m
+[32m+[m[32m                "every coupon must be an integer"[m
+[32m+[m[32m            )[m
+[32m+[m
+[32m+[m[32m        if coupon <= 0:[m
+[32m+[m[32m            raise ValueError([m
+[32m+[m[32m                "every coupon must be positive"[m
+[32m+[m[32m            )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef coupon_bundles([m
+[32m+[m[32m    coupons: list[int],[m
+[32m+[m[32m    target_discount: int,[m
+[32m+[m[32m    max_results: int = DEFAULT_MAX_RESULTS,[m
+[32m+[m[32m    max_coupons: int = DEFAULT_MAX_COUPONS,[m
+[32m+[m[32m) -> list[list[int]]:[m
+[32m+[m[32m    """Return unique one-time coupon bundles matching the target.[m
+[32m+[m
+[32m+[m[32m    Each physical coupon can be selected at most once.[m
+[32m+[m[32m    Duplicate coupon values are allowed.[m
+[32m+[m
+[32m+[m[32m    Args:[m
+[32m+[m[32m        coupons: List of positive integer coupon values.[m
+[32m+[m[32m        target_discount: Required total discount.[m
+[32m+[m[32m        max_results: Maximum number of bundles to return.[m
+[32m+[m[32m        max_coupons: Maximum number of input coupons allowed.[m
+[32m+[m
+[32m+[m[32m    Returns:[m
+[32m+[m[32m        A list of unique coupon bundles whose values sum to[m
+[32m+[m[32m        target_discount.[m
+[32m+[m
+[32m+[m[32m    Raises:[m
+[32m+[m[32m        TypeError: If an input has an invalid type.[m
+[32m+[m[32m        ValueError: If an input has an invalid value.[m
+[32m+[m[32m    """[m
+[32m+[m[32m    _validate_inputs([m
+[32m+[m[32m        coupons,[m
+[32m+[m[32m        target_discount,[m
+[32m+[m[32m        max_results,[m
+[32m+[m[32m        max_coupons,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    # Sort a copy so the caller's list is never modified.[m
+[32m+[m[32m    sorted_coupons = sorted(coupons)[m
+[32m+[m
+[32m+[m[32m    results: list[list[int]] = [][m
+[32m+[m[32m    path: list[int] = [][m
+[32m+[m
+[32m+[m[32m    def backtrack(start: int, remaining: int) -> None:[m
+[32m+[m[32m        """Explore valid coupon combinations recursively."""[m
+[32m+[m
+[32m+[m[32m        if len(results) >= max_results:[m
+[32m+[m[32m            return[m
+[32m+[m
+[32m+[m[32m        # Exact target reached.[m
+[32m+[m[32m        if remaining == 0:[m
+[32m+[m[32m            results.append(path.copy())[m
+[32m+[m[32m            return[m
+[32m+[m
+[32m+[m[32m        for index in range([m
+[32m+[m[32m            start,[m
+[32m+[m[32m            len(sorted_coupons),[m
+[32m+[m[32m        ):[m
+[32m+[m[32m            coupon = sorted_coupons[index][m
+[32m+[m
+[32m+[m[32m            # Skip duplicate values at the same recursion level.[m
+[32m+[m[32m            if ([m
+[32m+[m[32m                index > start[m
+[32m+[m[32m                and coupon == sorted_coupons[index - 1][m
+[32m+[m[32m            ):[m
+[32m+[m[32m                continue[m
+[32m+[m
+[32m+[m[32m            # Because coupons are positive and sorted,[m
+[32m+[m[32m            # later values will also be too large.[m
+[32m+[m[32m            if coupon > remaining:[m
+[32m+[m[32m                break[m
+[32m+[m
+[32m+[m[32m            path.append(coupon)[m
+[32m+[m
+[32m+[m[32m            # index + 1 means each physical coupon[m
+[32m+[m[32m            # can be used only once.[m
+[32m+[m[32m            backtrack([m
+[32m+[m[32m                index + 1,[m
+[32m+[m[32m                remaining - coupon,[m
+[32m+[m[32m            )[m
+[32m+[m
+[32m+[m[32m            # Backtrack.[m
+[32m+[m[32m            path.pop()[m
+[32m+[m
+[32m+[m[32m            if len(results) >= max_results:[m
+[32m+[m[32m                return[m
+[32m+[m
+[32m+[m[32m    start_time = perf_counter()[m
+[32m+[m
+[32m+[m[32m    # Logging only at the service boundary.[m
+[32m+[m[32m    logger.info([m
+[32m+[m[32m        "Starting coupon bundle search: "[m
+[32m+[m[32m        "coupon_count=%d target=%d max_results=%d",[m
+[32m+[m[32m        len(coupons),[m
+[32m+[m[32m        target_discount,[m
+[32m+[m[32m        max_results,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    backtrack(0, target_discount)[m
+[32m+[m
+[32m+[m[32m    duration = perf_counter() - start_time[m
+[32m+[m
+[32m+[m[32m    logger.info([m
+[32m+[m[32m        "Coupon bundle search completed: "[m
+[32m+[m[32m        "result_count=%d duration=%.6fs",[m
+[32m+[m[32m        len(results),[m
+[32m+[m[32m        duration,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    return results[m
+\ No newline at end of file[m
+[1mdiff --git a/day-27-combination-sum-ii/test_assignment.py b/day-27-combination-sum-ii/test_assignment.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..65f8b3b[m
+[1m--- /dev/null[m
+[1m+++ b/day-27-combination-sum-ii/test_assignment.py[m
+[36m@@ -0,0 +1,275 @@[m
+[32m+[m[32m"""Unit tests for the one-time coupon bundle builder."""[m
+[32m+[m
+[32m+[m[32mimport pytest[m
+[32m+[m
+[32m+[m[32mfrom assignment import coupon_bundles[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_expected_coupon_bundles() -> None:[m
+[32m+[m[32m    """Test the main assignment example."""[m
+[32m+[m[32m    coupons = [[m
+[32m+[m[32m        1000,[m
+[32m+[m[32m        100,[m
+[32m+[m[32m        200,[m
+[32m+[m[32m        700,[m
+[32m+[m[32m        600,[m
+[32m+[m[32m        100,[m
+[32m+[m[32m        500,[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    target = 800[m
+[32m+[m
+[32m+[m[32m    result = coupon_bundles([m
+[32m+[m[32m        coupons,[m
+[32m+[m[32m        target,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    expected = {[m
+[32m+[m[32m        (100, 100, 600),[m
+[32m+[m[32m        (100, 200, 500),[m
+[32m+[m[32m        (100, 700),[m
+[32m+[m[32m        (200, 600),[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    assert {tuple(bundle) for bundle in result} == expected[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_empty_coupons() -> None:[m
+[32m+[m[32m    """Empty input should return no bundles."""[m
+[32m+[m[32m    assert coupon_bundles([], 800) == [][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_single_coupon_exact_match() -> None:[m
+[32m+[m[32m    """A single coupon matching the target is valid."""[m
+[32m+[m[32m    assert coupon_bundles([100], 100) == [[100]][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_single_coupon_too_small() -> None:[m
+[32m+[m[32m    """A coupon below the target alone is not enough."""[m
+[32m+[m[32m    assert coupon_bundles([100], 200) == [][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_two_equal_coupons_can_be_used() -> None:[m
+[32m+[m[32m    """Two physical equal coupons can form one bundle."""[m
+[32m+[m[32m    assert coupon_bundles([100, 100], 200) == [[100, 100]][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_three_equal_coupons_do_not_create_duplicates() -> None:[m
+[32m+[m[32m    """Three equal coupons should not create duplicate bundles."""[m
+[32m+[m[32m    result = coupon_bundles([m
+[32m+[m[32m        [100, 100, 100],[m
+[32m+[m[32m        200,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert result == [[100, 100]][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_basic_multiple_solutions() -> None:[m
+[32m+[m[32m    """Test multiple valid combinations."""[m
+[32m+[m[32m    result = coupon_bundles([m
+[32m+[m[32m        [100, 200, 500, 700],[m
+[32m+[m[32m        800,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    expected = {[m
+[32m+[m[32m        (100, 200, 500),[m
+[32m+[m[32m        (100, 700),[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    assert {tuple(bundle) for bundle in result} == expected[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_main_example_again() -> None:[m
+[32m+[m[32m    """Verify the complete acceptance example."""[m
+[32m+[m[32m    coupons = [[m
+[32m+[m[32m        100,[m
+[32m+[m[32m        100,[m
+[32m+[m[32m        200,[m
+[32m+[m[32m        500,[m
+[32m+[m[32m        600,[m
+[32m+[m[32m        700,[m
+[32m+[m[32m        1000,[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    result = coupon_bundles([m
+[32m+[m[32m        coupons,[m
+[32m+[m[32m        800,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    expected = {[m
+[32m+[m[32m        (100, 100, 600),[m
+[32m+[m[32m        (100, 200, 500),[m
+[32m+[m[32m        (100, 700),[m
+[32m+[m[32m        (200, 600),[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    assert {tuple(bundle) for bundle in result} == expected[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_zero_coupon_rejected() -> None:[m
+[32m+[m[32m    """Zero-valued coupons must be rejected."""[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        coupon_bundles([0, 100], 100)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_negative_coupon_rejected() -> None:[m
+[32m+[m[32m    """Negative coupons must be rejected."""[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        coupon_bundles([-100, 200], 100)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_target_must_be_non_negative() -> None:[m
+[32m+[m[32m    """Negative targets must be rejected."""[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        coupon_bundles([100, 200], -100)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_coupons_must_be_list() -> None:[m
+[32m+[m[32m    """Coupons must be provided as a list."""[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        coupon_bundles([m
+[32m+[m[32m            (100, 200),  # type: ignore[arg-type][m
+[32m+[m[32m            300,[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_coupon_values_must_be_integers() -> None:[m
+[32m+[m[32m    """Coupon values must be integers."""[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        coupon_bundles([m
+[32m+[m[32m            [100, 200.5],  # type: ignore[list-item][m
+[32m+[m[32m            300,[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_target_must_be_integer() -> None:[m
+[32m+[m[32m    """Target must be an integer."""[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        coupon_bundles([m
+[32m+[m[32m            [100, 200],[m
+[32m+[m[32m            "300",  # type: ignore[arg-type][m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_boolean_coupon_rejected() -> None:[m
+[32m+[m[32m    """Boolean coupon values must not be accepted."""[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        coupon_bundles([m
+[32m+[m[32m            [True, 100],  # type: ignore[list-item][m
+[32m+[m[32m            100,[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_boolean_target_rejected() -> None:[m
+[32m+[m[32m    """Boolean target must not be accepted."""[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        coupon_bundles([m
+[32m+[m[32m            [100, 200],[m
+[32m+[m[32m            True,  # type: ignore[arg-type][m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_max_results_must_be_positive() -> None:[m
+[32m+[m[32m    """max_results must be greater than zero."""[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        coupon_bundles([m
+[32m+[m[32m            [100, 200],[m
+[32m+[m[32m            300,[m
+[32m+[m[32m            max_results=0,[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_max_coupons_limit() -> None:[m
+[32m+[m[32m    """Input size must respect max_coupons."""[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        coupon_bundles([m
+[32m+[m[32m            [100, 200, 300],[m
+[32m+[m[32m            600,[m
+[32m+[m[32m            max_coupons=2,[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_max_results_limit() -> None:[m
+[32m+[m[32m    """Result count must respect max_results."""[m
+[32m+[m[32m    result = coupon_bundles([m
+[32m+[m[32m        [100, 200, 300, 400],[m
+[32m+[m[32m        500,[m
+[32m+[m[32m        max_results=1,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert len(result) <= 1[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_every_bundle_has_correct_sum() -> None:[m
+[32m+[m[32m    """Every returned bundle must equal the target."""[m
+[32m+[m[32m    coupons = [[m
+[32m+[m[32m        100,[m
+[32m+[m[32m        100,[m
+[32m+[m[32m        200,[m
+[32m+[m[32m        500,[m
+[32m+[m[32m        600,[m
+[32m+[m[32m        700,[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    target = 800[m
+[32m+[m
+[32m+[m[32m    result = coupon_bundles([m
+[32m+[m[32m        coupons,[m
+[32m+[m[32m        target,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    for bundle in result:[m
+[32m+[m[32m        assert sum(bundle) == target[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_no_duplicate_bundles() -> None:[m
+[32m+[m[32m    """No duplicate bundles should be returned."""[m
+[32m+[m[32m    result = coupon_bundles([m
+[32m+[m[32m        [100, 100, 200, 500, 600, 700],[m
+[32m+[m[32m        800,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    normalized = {[m
+[32m+[m[32m        tuple(bundle)[m
+[32m+[m[32m        for bundle in result[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    assert len(normalized) == len(result)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_original_input_is_not_modified() -> None:[m
+[32m+[m[32m    """The original coupon list must remain unchanged."""[m
+[32m+[m[32m    coupons = [[m
+[32m+[m[32m        1000,[m
+[32m+[m[32m        100,[m
+[32m+[m[32m        200,[m
+[32m+[m[32m        700,[m
+[32m+[m[32m        600,[m
+[32m+[m[32m        100,[m
+[32m+[m[32m        500,[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    original = coupons.copy()[m
+[32m+[m
+[32m+[m[32m    coupon_bundles([m
+[32m+[m[32m        coupons,[m
+[32m+[m[32m        800,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert coupons == original[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_each_bundle_is_sorted() -> None:[m
+[32m+[m[32m    """Each generated bundle should be in sorted order."""[m
+[32m+[m[32m    result = coupon_bundles([m
+[32m+[m[32m        [700, 100, 500, 200, 600],[m
+[32m+[m[32m        800,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    for bundle in result:[m
+[32m+[m[32m        assert bundle == sorted(bundle)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_no_solution() -> None:[m
+[32m+[m[32m    """Return an empty list when no solution exists."""[m
+[32m+[m[32m    assert coupon_bundles([100, 200], 700) == [][m
+\ No newline at end of file[m
+[1mdiff --git a/day-28-generate-parentheses/README.md b/day-28-generate-parentheses/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/day-28-generate-parentheses/assignment.py b/day-28-generate-parentheses/assignment.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/day-28-generate-parentheses/test_assignment.py b/day-28-generate-parentheses/test_assignment.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7ed521b[m
+[1m--- /dev/null[m
+[1m+++ b/day-28-generate-parentheses/test_assignment.py[m
+[36m@@ -0,0 +1,85 @@[m
+[32m+[m[32mimport pytest[m
+[32m+[m
+[32m+[m[32mfrom assignment import generate_test_patterns[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_zero_pairs():[m
+[32m+[m[32m    assert generate_test_patterns(0) == [""][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_one_pair():[m
+[32m+[m[32m    assert generate_test_patterns(1) == ["()"][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_two_pairs():[m
+[32m+[m[32m    result = generate_test_patterns(2)[m
+[32m+[m
+[32m+[m[32m    assert set(result) == {[m
+[32m+[m[32m        "(())",[m
+[32m+[m[32m        "()()",[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_three_pairs():[m
+[32m+[m[32m    result = generate_test_patterns(3)[m
+[32m+[m
+[32m+[m[32m    expected = {[m
+[32m+[m[32m        "((()))",[m
+[32m+[m[32m        "(()())",[m
+[32m+[m[32m        "(())()",[m
+[32m+[m[32m        "()(())",[m
+[32m+[m[32m        "()()()",[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    assert set(result) == expected[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_unique_patterns():[m
+[32m+[m[32m    result = generate_test_patterns(4)[m
+[32m+[m
+[32m+[m[32m    assert len(result) == len(set(result))[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_correct_length():[m
+[32m+[m[32m    for pair_count in range(5):[m
+[32m+[m[32m        result = generate_test_patterns(pair_count)[m
+[32m+[m
+[32m+[m[32m        for pattern in result:[m
+[32m+[m[32m            assert len(pattern) == 2 * pair_count[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef is_valid(pattern):[m
+[32m+[m[32m    balance = 0[m
+[32m+[m
+[32m+[m[32m    for character in pattern:[m
+[32m+[m[32m        if character == "(":[m
+[32m+[m[32m            balance += 1[m
+[32m+[m[32m        else:[m
+[32m+[m[32m            balance -= 1[m
+[32m+[m
+[32m+[m[32m        if balance < 0:[m
+[32m+[m[32m            return False[m
+[32m+[m
+[32m+[m[32m    return balance == 0[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_every_pattern_is_valid():[m
+[32m+[m[32m    result = generate_test_patterns(4)[m
+[32m+[m
+[32m+[m[32m    for pattern in result:[m
+[32m+[m[32m        assert is_valid(pattern)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_negative_input():[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        generate_test_patterns(-1)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_string_input():[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        generate_test_patterns("3")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_boolean_input():[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        generate_test_patterns(True)[m
+\ No newline at end of file[m
+[1mdiff --git a/day-29-warehouse-product-code-search/README.md b/day-29-warehouse-product-code-search/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..50db65e[m
+[1m--- /dev/null[m
+[1m+++ b/day-29-warehouse-product-code-search/README.md[m
+[36m@@ -0,0 +1,30 @@[m
+[32m+[m[32m# Day 29 — Warehouse Product-Code Search[m
+[32m+[m
+[32m+[m[32m## 1. Problem[m
+[32m+[m
+[32m+[m[32mA warehouse stores product-code characters in a grid.[m
+[32m+[m
+[32m+[m[32mThe system must determine whether a given product code can be formed[m
+[32m+[m[32mby moving through adjacent cells.[m
+[32m+[m
+[32m+[m[32mAllowed movement:[m
+[32m+[m
+[32m+[m[32m- Up[m
+[32m+[m[32m- Down[m
+[32m+[m[32m- Left[m
+[32m+[m[32m- Right[m
+[32m+[m
+[32m+[m[32mDiagonal movement is not allowed.[m
+[32m+[m
+[32m+[m[32mA grid cell cannot be reused within the same path.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 2. Example[m
+[32m+[m
+[32m+[m[32mGrid:[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32mC A T[m
+[32m+[m[32mX R X[m
+[32m+[m[32mX X X[m
+\ No newline at end of file[m
+[1mdiff --git a/day-29-warehouse-product-code-search/assignment.py b/day-29-warehouse-product-code-search/assignment.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7b9c1ac[m
+[1m--- /dev/null[m
+[1m+++ b/day-29-warehouse-product-code-search/assignment.py[m
+[36m@@ -0,0 +1,245 @@[m
+[32m+[m[32m"""Warehouse product-code search using backtracking."""[m
+[32m+[m
+[32m+[m[32mfrom __future__ import annotations[m
+[32m+[m
+[32m+[m[32mfrom time import perf_counter[m
+[32m+[m
+[32m+[m[32mDEFAULT_MAX_ROWS = 100[m
+[32m+[m[32mDEFAULT_MAX_COLUMNS = 100[m
+[32m+[m[32mDEFAULT_MAX_WORD_LENGTH = 100[m
+[32m+[m[32mDEFAULT_TIMEOUT_SECONDS = 5.0[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass GridValidationError(ValueError):[m
+[32m+[m[32m    """Raised when the warehouse grid is invalid."""[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass ProductCodeValidationError(ValueError):[m
+[32m+[m[32m    """Raised when the product code is invalid."""[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass SearchTimeoutError(TimeoutError):[m
+[32m+[m[32m    """Raised when the search exceeds the configured time limit."""[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef _validate_grid([m
+[32m+[m[32m    shelf_grid: list[list[str]],[m
+[32m+[m[32m    max_rows: int,[m
+[32m+[m[32m    max_columns: int,[m
+[32m+[m[32m) -> None:[m
+[32m+[m[32m    """Validate the warehouse grid."""[m
+[32m+[m
+[32m+[m[32m    if type(shelf_grid) is not list:[m
+[32m+[m[32m        raise TypeError("shelf_grid must be a list")[m
+[32m+[m
+[32m+[m[32m    if not shelf_grid:[m
+[32m+[m[32m        raise GridValidationError("shelf_grid must not be empty")[m
+[32m+[m
+[32m+[m[32m    if type(max_rows) is not int or max_rows <= 0:[m
+[32m+[m[32m        raise ValueError("max_rows must be a positive integer")[m
+[32m+[m
+[32m+[m[32m    if type(max_columns) is not int or max_columns <= 0:[m
+[32m+[m[32m        raise ValueError("max_columns must be a positive integer")[m
+[32m+[m
+[32m+[m[32m    if len(shelf_grid) > max_rows:[m
+[32m+[m[32m        raise GridValidationError([m
+[32m+[m[32m            f"grid rows must not exceed {max_rows}"[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m    column_count = None[m
+[32m+[m
+[32m+[m[32m    for row in shelf_grid:[m
+[32m+[m[32m        if type(row) is not list:[m
+[32m+[m[32m            raise TypeError("every grid row must be a list")[m
+[32m+[m
+[32m+[m[32m        if not row:[m
+[32m+[m[32m            raise GridValidationError([m
+[32m+[m[32m                "grid rows must not be empty"[m
+[32m+[m[32m            )[m
+[32m+[m
+[32m+[m[32m        if column_count is None:[m
+[32m+[m[32m            column_count = len(row)[m
+[32m+[m[32m        elif len(row) != column_count:[m
+[32m+[m[32m            raise GridValidationError([m
+[32m+[m[32m                "shelf_grid must be rectangular"[m
+[32m+[m[32m            )[m
+[32m+[m
+[32m+[m[32m        if len(row) > max_columns:[m
+[32m+[m[32m            raise GridValidationError([m
+[32m+[m[32m                f"grid columns must not exceed {max_columns}"[m
+[32m+[m[32m            )[m
+[32m+[m
+[32m+[m[32m        for character in row:[m
+[32m+[m[32m            if type(character) is not str:[m
+[32m+[m[32m                raise TypeError([m
+[32m+[m[32m                    "every grid cell must contain a string"[m
+[32m+[m[32m                )[m
+[32m+[m
+[32m+[m[32m            if len(character) != 1:[m
+[32m+[m[32m                raise GridValidationError([m
+[32m+[m[32m                    "each grid cell must contain exactly one character"[m
+[32m+[m[32m                )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef _validate_product_code([m
+[32m+[m[32m    product_code: str,[m
+[32m+[m[32m    max_word_length: int,[m
+[32m+[m[32m) -> None:[m
+[32m+[m[32m    """Validate the product code."""[m
+[32m+[m
+[32m+[m[32m    if type(product_code) is not str:[m
+[32m+[m[32m        raise TypeError("product_code must be a string")[m
+[32m+[m
+[32m+[m[32m    if not product_code:[m
+[32m+[m[32m        raise ProductCodeValidationError([m
+[32m+[m[32m            "product_code must not be empty"[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m    if len(product_code) > max_word_length:[m
+[32m+[m[32m        raise ProductCodeValidationError([m
+[32m+[m[32m            f"product_code length must not exceed "[m
+[32m+[m[32m            f"{max_word_length}"[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef product_code_exists([m
+[32m+[m[32m    shelf_grid: list[list[str]],[m
+[32m+[m[32m    product_code: str,[m
+[32m+[m[32m    max_rows: int = DEFAULT_MAX_ROWS,[m
+[32m+[m[32m    max_columns: int = DEFAULT_MAX_COLUMNS,[m
+[32m+[m[32m    max_word_length: int = DEFAULT_MAX_WORD_LENGTH,[m
+[32m+[m[32m    timeout_seconds: float = DEFAULT_TIMEOUT_SECONDS,[m
+[32m+[m[32m) -> bool:[m
+[32m+[m[32m    """Return whether a product code exists in the shelf grid.[m
+[32m+[m
+[32m+[m[32m    The search moves horizontally or vertically through adjacent[m
+[32m+[m[32m    cells. A grid cell cannot be reused within the same path.[m
+[32m+[m
+[32m+[m[32m    Args:[m
+[32m+[m[32m        shelf_grid: Rectangular warehouse grid.[m
+[32m+[m[32m        product_code: Product code to search for.[m
+[32m+[m[32m        max_rows: Maximum allowed number of rows.[m
+[32m+[m[32m        max_columns: Maximum allowed number of columns.[m
+[32m+[m[32m        max_word_length: Maximum allowed product-code length.[m
+[32m+[m[32m        timeout_seconds: Maximum search duration.[m
+[32m+[m
+[32m+[m[32m    Returns:[m
+[32m+[m[32m        True when the product code can be found, otherwise False.[m
+[32m+[m
+[32m+[m[32m    Raises:[m
+[32m+[m[32m        TypeError: If an input has an invalid type.[m
+[32m+[m[32m        ValueError: If an input has an invalid value.[m
+[32m+[m[32m        GridValidationError: If the grid is invalid.[m
+[32m+[m[32m        ProductCodeValidationError: If the product code is invalid.[m
+[32m+[m[32m        SearchTimeoutError: If the search exceeds the time limit.[m
+[32m+[m[32m    """[m
+[32m+[m
+[32m+[m[32m    _validate_grid([m
+[32m+[m[32m        shelf_grid,[m
+[32m+[m[32m        max_rows,[m
+[32m+[m[32m        max_columns,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    _validate_product_code([m
+[32m+[m[32m        product_code,[m
+[32m+[m[32m        max_word_length,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    if type(timeout_seconds) not in (int, float):[m
+[32m+[m[32m        raise TypeError([m
+[32m+[m[32m            "timeout_seconds must be a number"[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m    if timeout_seconds <= 0:[m
+[32m+[m[32m        raise ValueError([m
+[32m+[m[32m            "timeout_seconds must be positive"[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m    # Copy the grid so the caller's data cannot be changed.[m
+[32m+[m[32m    grid = [row.copy() for row in shelf_grid][m
+[32m+[m
+[32m+[m[32m    rows = len(grid)[m
+[32m+[m[32m    columns = len(grid[0])[m
+[32m+[m
+[32m+[m[32m    visited: set[tuple[int, int]] = set()[m
+[32m+[m
+[32m+[m[32m    metrics = {[m
+[32m+[m[32m        "cells_checked": 0,[m
+[32m+[m[32m        "paths_explored": 0,[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    start_time = perf_counter()[m
+[32m+[m
+[32m+[m[32m    def check_timeout() -> None:[m
+[32m+[m[32m        """Raise an exception if the search timed out."""[m
+[32m+[m
+[32m+[m[32m        elapsed = perf_counter() - start_time[m
+[32m+[m
+[32m+[m[32m        if elapsed > timeout_seconds:[m
+[32m+[m[32m            raise SearchTimeoutError([m
+[32m+[m[32m                "product-code search exceeded timeout"[m
+[32m+[m[32m            )[m
+[32m+[m
+[32m+[m[32m    def backtrack([m
+[32m+[m[32m        row: int,[m
+[32m+[m[32m        column: int,[m
+[32m+[m[32m        code_index: int,[m
+[32m+[m[32m    ) -> bool:[m
+[32m+[m[32m        """Search recursively from one grid position."""[m
+[32m+[m
+[32m+[m[32m        check_timeout()[m
+[32m+[m
+[32m+[m[32m        metrics["paths_explored"] += 1[m
+[32m+[m
+[32m+[m[32m        if grid[row][column] != product_code[code_index]:[m
+[32m+[m[32m            return False[m
+[32m+[m
+[32m+[m[32m        metrics["cells_checked"] += 1[m
+[32m+[m
+[32m+[m[32m        if code_index == len(product_code) - 1:[m
+[32m+[m[32m            return True[m
+[32m+[m
+[32m+[m[32m        visited.add((row, column))[m
+[32m+[m
+[32m+[m[32m        directions = ([m
+[32m+[m[32m            (-1, 0),  # up[m
+[32m+[m[32m            (1, 0),   # down[m
+[32m+[m[32m            (0, -1),  # left[m
+[32m+[m[32m            (0, 1),   # right[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m[32m        for row_change, column_change in directions:[m
+[32m+[m[32m            next_row = row + row_change[m
+[32m+[m[32m            next_column = column + column_change[m
+[32m+[m
+[32m+[m[32m            if not ([m
+[32m+[m[32m                0 <= next_row < rows[m
+[32m+[m[32m                and 0 <= next_column < columns[m
+[32m+[m[32m            ):[m
+[32m+[m[32m                continue[m
+[32m+[m
+[32m+[m[32m            if (next_row, next_column) in visited:[m
+[32m+[m[32m                continue[m
+[32m+[m
+[32m+[m[32m            if backtrack([m
+[32m+[m[32m                next_row,[m
+[32m+[m[32m                next_column,[m
+[32m+[m[32m                code_index + 1,[m
+[32m+[m[32m            ):[m
+[32m+[m[32m                visited.remove((row, column))[m
+[32m+[m[32m                return True[m
+[32m+[m
+[32m+[m[32m        visited.remove((row, column))[m
+[32m+[m[32m        return False[m
+[32m+[m
+[32m+[m[32m    for row in range(rows):[m
+[32m+[m[32m        for column in range(columns):[m
+[32m+[m[32m            check_timeout()[m
+[32m+[m
+[32m+[m[32m            if grid[row][column] != product_code[0]:[m
+[32m+[m[32m                continue[m
+[32m+[m
+[32m+[m[32m            if backtrack(row, column, 0):[m
+[32m+[m[32m                return True[m
+[32m+[m
+[32m+[m[32m    return False[m
+\ No newline at end of file[m
+[1mdiff --git a/day-29-warehouse-product-code-search/test_assignment.py b/day-29-warehouse-product-code-search/test_assignment.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f0b34a3[m
+[1m--- /dev/null[m
+[1m+++ b/day-29-warehouse-product-code-search/test_assignment.py[m
+[36m@@ -0,0 +1,273 @@[m
+[32m+[m[32m"""Tests for warehouse product-code search."""[m
+[32m+[m
+[32m+[m[32mimport pytest[m
+[32m+[m
+[32m+[m[32mfrom assignment import ([m
+[32m+[m[32m    GridValidationError,[m
+[32m+[m[32m    ProductCodeValidationError,[m
+[32m+[m[32m    product_code_exists,[m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_product_code_exists_horizontally():[m
+[32m+[m[32m    """Product code can be found horizontally."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["C", "A", "T"],[m
+[32m+[m[32m        ["X", "Y", "Z"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    assert product_code_exists(grid, "CAT") is True[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_product_code_exists_vertically():[m
+[32m+[m[32m    """Product code can be found vertically."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["C", "X"],[m
+[32m+[m[32m        ["A", "Y"],[m
+[32m+[m[32m        ["T", "Z"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    assert product_code_exists(grid, "CAT") is True[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_product_code_exists_with_turn():[m
+[32m+[m[32m    """Product code can change direction."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["C", "A"],[m
+[32m+[m[32m        ["X", "T"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    assert product_code_exists(grid, "CAT") is True[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_product_code_does_not_exist():[m
+[32m+[m[32m    """Return False when product code is absent."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["C", "A"],[m
+[32m+[m[32m        ["X", "T"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    assert product_code_exists(grid, "DOG") is False[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_single_character_code():[m
+[32m+[m[32m    """A single matching cell is valid."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A", "B"],[m
+[32m+[m[32m        ["C", "D"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    assert product_code_exists(grid, "A") is True[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_single_character_code_missing():[m
+[32m+[m[32m    """A missing single character returns False."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A", "B"],[m
+[32m+[m[32m        ["C", "D"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    assert product_code_exists(grid, "X") is False[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_cell_cannot_be_reused():[m
+[32m+[m[32m    """The same cell cannot be reused in one path."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    assert product_code_exists(grid, "AA") is False[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_no_diagonal_movement():[m
+[32m+[m[32m    """Diagonal movement is not allowed."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A", "X"],[m
+[32m+[m[32m        ["X", "B"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    assert product_code_exists(grid, "AB") is False[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_empty_grid_rejected():[m
+[32m+[m[32m    """An empty grid must be rejected."""[m
+[32m+[m[32m    with pytest.raises(GridValidationError):[m
+[32m+[m[32m        product_code_exists([], "ABC")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_empty_row_rejected():[m
+[32m+[m[32m    """Empty rows must be rejected."""[m
+[32m+[m[32m    with pytest.raises(GridValidationError):[m
+[32m+[m[32m        product_code_exists([[]], "ABC")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_non_rectangular_grid_rejected():[m
+[32m+[m[32m    """All rows must have equal lengths."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A", "B"],[m
+[32m+[m[32m        ["C"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    with pytest.raises(GridValidationError):[m
+[32m+[m[32m        product_code_exists(grid, "ABC")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_grid_row_must_be_list():[m
+[32m+[m[32m    """Every grid row must be a list."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A", "B"],[m
+[32m+[m[32m        "CD",[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        product_code_exists(grid, "ABC")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_grid_cell_must_be_single_character():[m
+[32m+[m[32m    """Each grid cell must contain one character."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["ABC", "D"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    with pytest.raises(GridValidationError):[m
+[32m+[m[32m        product_code_exists(grid, "ABC")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_grid_cell_must_be_string():[m
+[32m+[m[32m    """Grid cells must contain strings."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A", 1],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        product_code_exists(grid, "A")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_product_code_must_be_string():[m
+[32m+[m[32m    """Product code must be a string."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A", "B"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        product_code_exists([m
+[32m+[m[32m            grid,[m
+[32m+[m[32m            123,  # type: ignore[arg-type][m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_empty_product_code_rejected():[m
+[32m+[m[32m    """An empty product code must be rejected."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A", "B"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    with pytest.raises(ProductCodeValidationError):[m
+[32m+[m[32m        product_code_exists(grid, "")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_product_code_length_limit():[m
+[32m+[m[32m    """Product code length limit is enforced."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    with pytest.raises(ProductCodeValidationError):[m
+[32m+[m[32m        product_code_exists([m
+[32m+[m[32m            grid,[m
+[32m+[m[32m            "ABC",[m
+[32m+[m[32m            max_word_length=2,[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_grid_row_limit():[m
+[32m+[m[32m    """Maximum row limit is enforced."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A"],[m
+[32m+[m[32m        ["B"],[m
+[32m+[m[32m        ["C"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    with pytest.raises(GridValidationError):[m
+[32m+[m[32m        product_code_exists([m
+[32m+[m[32m            grid,[m
+[32m+[m[32m            "A",[m
+[32m+[m[32m            max_rows=2,[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_grid_column_limit():[m
+[32m+[m[32m    """Maximum column limit is enforced."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A", "B", "C"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    with pytest.raises(GridValidationError):[m
+[32m+[m[32m        product_code_exists([m
+[32m+[m[32m            grid,[m
+[32m+[m[32m            "A",[m
+[32m+[m[32m            max_columns=2,[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_timeout_must_be_positive():[m
+[32m+[m[32m    """Timeout must be positive."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    with pytest.raises(ValueError):[m
+[32m+[m[32m        product_code_exists([m
+[32m+[m[32m            grid,[m
+[32m+[m[32m            "A",[m
+[32m+[m[32m            timeout_seconds=0,[m
+[32m+[m[32m        )[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_original_grid_is_not_modified():[m
+[32m+[m[32m    """The caller's grid must remain unchanged."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["C", "A"],[m
+[32m+[m[32m        ["X", "T"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    original = [row.copy() for row in grid][m
+[32m+[m
+[32m+[m[32m    product_code_exists(grid, "CAT")[m
+[32m+[m
+[32m+[m[32m    assert grid == original[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_reuse_is_not_allowed():[m
+[32m+[m[32m    """A cell cannot be used twice in a path."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A", "B"],[m
+[32m+[m[32m        ["C", "D"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    assert product_code_exists(grid, "ABCA") is False[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_longer_path():[m
+[32m+[m[32m    """Test a longer valid path."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["C", "A", "T", "X"],[m
+[32m+[m[32m        ["X", "R", "E", "X"],[m
+[32m+[m[32m        ["X", "E", "D", "X"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    assert product_code_exists(grid, "CATED") is True[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_boolean_is_not_accepted_as_timeout():[m
+[32m+[m[32m    """Boolean timeout values should not be accepted."""[m
+[32m+[m[32m    grid = [[m
+[32m+[m[32m        ["A"],[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m[32m    with pytest.raises(TypeError):[m
+[32m+[m[32m        product_code_exists([m
+[32m+[m[32m            grid,[m
+[32m+[m[32m            "A",[m
+[32m+[m[32m            timeout_seconds=True,  # type: ignore[arg-type][m
+[32m+[m[32m        )[m
+\ No newline at end of file[m
+[1mdiff --git a/day-30-binary-tree-depth/README.md b/day-30-binary-tree-depth/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9742ed9[m
+[1m--- /dev/null[m
+[1m+++ b/day-30-binary-tree-depth/README.md[m
+[36m@@ -0,0 +1,27 @@[m
+[32m+[m[32m# Day 30 — Binary Tree Depth[m
+[32m+[m
+[32m+[m[32m## 1. Problem[m
+[32m+[m
+[32m+[m[32mAn organization hierarchy can be represented as a binary tree.[m
+[32m+[m
+[32m+[m[32mEach employee can have at most two direct reports:[m
+[32m+[m
+[32m+[m[32m- left child[m
+[32m+[m[32m- right child[m
+[32m+[m
+[32m+[m[32mThe objective is to find the maximum number of employee levels[m
+[32m+[m[32mfrom the root employee to the deepest employee.[m
+[32m+[m
+[32m+[m[32m---[m
+[32m+[m
+[32m+[m[32m## 2. Depth Definition[m
+[32m+[m
+[32m+[m[32mThis implementation measures depth using the number of nodes.[m
+[32m+[m
+[32m+[m[32mTherefore:[m
+[32m+[m
+[32m+[m[32m```text[m
+[32m+[m[32mEmpty tree → 0[m
+[32m+[m[32mOne node → 1[m
+[32m+[m[32mTwo nodes → 2[m
+[32m+[m[32mThree nodes → 3[m
+\ No newline at end of file[m
+[1mdiff --git a/day-30-binary-tree-depth/assignment.py b/day-30-binary-tree-depth/assignment.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0391c89[m
+[1m--- /dev/null[m
+[1m+++ b/day-30-binary-tree-depth/assignment.py[m
+[36m@@ -0,0 +1,141 @@[m
+[32m+[m[32m"""Binary-tree hierarchy depth algorithms."""[m
+[32m+[m
+[32m+[m[32mfrom __future__ import annotations[m
+[32m+[m
+[32m+[m[32mfrom collections import deque[m
+[32m+[m[32mfrom dataclasses import dataclass[m
+[32m+[m
+[32m+[m
+[32m+[m[32m@dataclass[m
+[32m+[m[32mclass TreeNode:[m
+[32m+[m[32m    """Represent an employee in a binary hierarchy."""[m
+[32m+[m
+[32m+[m[32m    employee_id: int[m
+[32m+[m[32m    left: TreeNode | None = None[m
+[32m+[m[32m    right: TreeNode | None = None[m
+[32m+[m
+[32m+[m
+[32m+[m[32mclass HierarchyCycleError(ValueError):[m
+[32m+[m[32m    """Raised when a cycle is detected in the hierarchy."""[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef hierarchy_depth(root: TreeNode | None) -> int:[m
+[32m+[m[32m    """Return the maximum depth of a binary hierarchy using recursive DFS.[m
+[32m+[m
+[32m+[m[32m    Depth is measured by the number of nodes on the longest path[m
+[32m+[m[32m    from the root to a leaf.[m
+[32m+[m
+[32m+[m[32m    An empty tree has depth 0.[m
+[32m+[m[32m    A single-node tree has depth 1.[m
+[32m+[m
+[32m+[m[32m    Args:[m
+[32m+[m[32m        root: Root employee of the hierarchy.[m
+[32m+[m
+[32m+[m[32m    Returns:[m
+[32m+[m[32m        Maximum number of nodes from root to a leaf.[m
+[32m+[m
+[32m+[m[32m    Raises:[m
+[32m+[m[32m        HierarchyCycleError: If a cycle is detected.[m
+[32m+[m[32m    """[m
+[32m+[m
+[32m+[m[32m    active_path: set[int] = set()[m
+[32m+[m
+[32m+[m[32m    def dfs(node: TreeNode | None) -> int:[m
+[32m+[m[32m        if node is None:[m
+[32m+[m[32m            return 0[m
+[32m+[m
+[32m+[m[32m        node_identity = id(node)[m
+[32m+[m
+[32m+[m[32m        if node_identity in active_path:[m
+[32m+[m[32m            raise HierarchyCycleError([m
+[32m+[m[32m                "Cycle detected in organization hierarchy"[m
+[32m+[m[32m            )[m
+[32m+[m
+[32m+[m[32m        active_path.add(node_identity)[m
+[32m+[m
+[32m+[m[32m        left_depth = dfs(node.left)[m
+[32m+[m[32m        right_depth = dfs(node.right)[m
+[32m+[m
+[32m+[m[32m        active_path.remove(node_identity)[m
+[32m+[m
+[32m+[m[32m        return 1 + max(left_depth, right_depth)[m
+[32m+[m
+[32m+[m[32m    return dfs(root)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef hierarchy_depth_iterative([m
+[32m+[m[32m    root: TreeNode | None,[m
+[32m+[m[32m) -> int:[m
+[32m+[m[32m    """Return maximum hierarchy depth using iterative DFS.[m
+[32m+[m
+[32m+[m[32m    This avoids Python recursion-depth limitations on very deep[m
+[32m+[m[32m    hierarchies.[m
+[32m+[m[32m    """[m
+[32m+[m
+[32m+[m[32m    if root is None:[m
+[32m+[m[32m        return 0[m
+[32m+[m
+[32m+[m[32m    stack = [(root, 1)][m
+[32m+[m[32m    active_path: set[int] = set()[m
+[32m+[m[32m    maximum_depth = 0[m
+[32m+[m
+[32m+[m[32m    while stack:[m
+[32m+[m[32m        node, depth = stack.pop()[m
+[32m+[m
+[32m+[m[32m        if node is None:[m
+[32m+[m[32m            continue[m
+[32m+[m
+[32m+[m[32m        node_identity = id(node)[m
+[32m+[m
+[32m+[m[32m        if node_identity in active_path:[m
+[32m+[m[32m            raise HierarchyCycleError([m
+[32m+[m[32m                "Cycle detected in organization hierarchy"[m
+[32m+[m[32m            )[m
+[32m+[m
+[32m+[m[32m        maximum_depth = max(maximum_depth, depth)[m
+[32m+[m
+[32m+[m[32m        if node.right is not None:[m
+[32m+[m[32m            stack.append((node.right, depth + 1))[m
+[32m+[m
+[32m+[m[32m        if node.left is not None:[m
+[32m+[m[32m            stack.append((node.left, depth + 1))[m
+[32m+[m
+[32m+[m[32m    return maximum_depth[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef max_depth_bfs([m
+[32m+[m[32m    root: TreeNode | None,[m
+[32m+[m[32m) -> int:[m
+[32m+[m[32m    """Return maximum hierarchy depth using breadth-first search."""[m
+[32m+[m
+[32m+[m[32m    if root is None:[m
+[32m+[m[32m        return 0[m
+[32m+[m
+[32m+[m[32m    queue = deque([root])[m
+[32m+[m[32m    depth = 0[m
+[32m+[m[32m    visited: set[int] = set()[m
+[32m+[m
+[32m+[m[32m    while queue:[m
+[32m+[m[32m        level_size = len(queue)[m
+[32m+[m
+[32m+[m[32m        for _ in range(level_size):[m
+[32m+[m[32m            node = queue.popleft()[m
+[32m+[m
+[32m+[m[32m            node_identity = id(node)[m
+[32m+[m
+[32m+[m[32m            if node_identity in visited:[m
+[32m+[m[32m                raise HierarchyCycleError([m
+[32m+[m[32m                    "Cycle or repeated node detected"[m
+[32m+[m[32m                )[m
+[32m+[m
+[32m+[m[32m            visited.add(node_identity)[m
+[32m+[m
+[32m+[m[32m            if node.left is not None:[m
+[32m+[m[32m                queue.append(node.left)[m
+[32m+[m
+[32m+[m[32m            if node.right is not None:[m
+[32m+[m[32m                queue.append(node.right)[m
+[32m+[m
+[32m+[m[32m        depth += 1[m
+[32m+[m
+[32m+[m[32m    return depth[m
+\ No newline at end of file[m
+[1mdiff --git a/day-30-binary-tree-depth/test_assignment.py b/day-30-binary-tree-depth/test_assignment.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..487ea15[m
+[1m--- /dev/null[m
+[1m+++ b/day-30-binary-tree-depth/test_assignment.py[m
+[36m@@ -0,0 +1,198 @@[m
+[32m+[m[32m"""Tests for binary-tree hierarchy depth."""[m
+[32m+[m
+[32m+[m[32mimport pytest[m
+[32m+[m
+[32m+[m[32mfrom assignment import ([m
+[32m+[m[32m    HierarchyCycleError,[m
+[32m+[m[32m    TreeNode,[m
+[32m+[m[32m    hierarchy_depth,[m
+[32m+[m[32m    hierarchy_depth_iterative,[m
+[32m+[m[32m    max_depth_bfs,[m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_empty_tree():[m
+[32m+[m[32m    """An empty tree has depth zero."""[m
+[32m+[m[32m    assert hierarchy_depth(None) == 0[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_single_node():[m
+[32m+[m[32m    """A single node has depth one."""[m
+[32m+[m[32m    root = TreeNode(1)[m
+[32m+[m
+[32m+[m[32m    assert hierarchy_depth(root) == 1[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_balanced_three_level_tree():[m
+[32m+[m[32m    """A balanced three-level tree has depth three."""[m
+[32m+[m
+[32m+[m[32m    root = TreeNode([m
+[32m+[m[32m        1,[m
+[32m+[m[32m        left=TreeNode(2),[m
+[32m+[m[32m        right=TreeNode(3),[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert hierarchy_depth(root) == 2[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_three_level_tree():[m
+[32m+[m[32m    """A tree with three employee levels has depth three."""[m
+[32m+[m
+[32m+[m[32m    root = TreeNode([m
+[32m+[m[32m        1,[m
+[32m+[m[32m        left=TreeNode([m
+[32m+[m[32m            2,[m
+[32m+[m[32m            left=TreeNode(4),[m
+[32m+[m[32m            right=TreeNode(5),[m
+[32m+[m[32m        ),[m
+[32m+[m[32m        right=TreeNode(3),[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert hierarchy_depth(root) == 3[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_skewed_tree():[m
+[32m+[m[32m    """A four-node skewed tree has depth four."""[m
+[32m+[m
+[32m+[m[32m    root = TreeNode(1)[m
+[32m+[m[32m    root.right = TreeNode(2)[m
+[32m+[m[32m    root.right.right = TreeNode(3)[m
+[32m+[m[32m    root.right.right.right = TreeNode(4)[m
+[32m+[m
+[32m+[m[32m    assert hierarchy_depth(root) == 4[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_uneven_tree():[m
+[32m+[m[32m    """An uneven tree returns the deepest branch."""[m
+[32m+[m
+[32m+[m[32m    root = TreeNode([m
+[32m+[m[32m        1,[m
+[32m+[m[32m        left=TreeNode(2),[m
+[32m+[m[32m        right=TreeNode([m
+[32m+[m[32m            3,[m
+[32m+[m[32m            left=TreeNode([m
+[32m+[m[32m                4,[m
+[32m+[m[32m                left=TreeNode(5),[m
+[32m+[m[32m            ),[m
+[32m+[m[32m        ),[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert hierarchy_depth(root) == 4[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_left_skewed_tree():[m
+[32m+[m[32m    """A left-only hierarchy is handled correctly."""[m
+[32m+[m
+[32m+[m[32m    root = TreeNode(1)[m
+[32m+[m[32m    root.left = TreeNode(2)[m
+[32m+[m[32m    root.left.left = TreeNode(3)[m
+[32m+[m
+[32m+[m[32m    assert hierarchy_depth(root) == 3[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_original_tree_is_not_modified():[m
+[32m+[m[32m    """Depth calculation must not modify the tree."""[m
+[32m+[m
+[32m+[m[32m    child = TreeNode(2)[m
+[32m+[m[32m    root = TreeNode(1, left=child)[m
+[32m+[m
+[32m+[m[32m    hierarchy_depth(root)[m
+[32m+[m
+[32m+[m[32m    assert root.left is child[m
+[32m+[m[32m    assert root.left.employee_id == 2[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_recursive_and_iterative_match():[m
+[32m+[m[32m    """Recursive and iterative DFS must return the same result."""[m
+[32m+[m
+[32m+[m[32m    root = TreeNode([m
+[32m+[m[32m        1,[m
+[32m+[m[32m        left=TreeNode([m
+[32m+[m[32m            2,[m
+[32m+[m[32m            left=TreeNode(4),[m
+[32m+[m[32m        ),[m
+[32m+[m[32m        right=TreeNode([m
+[32m+[m[32m            3,[m
+[32m+[m[32m            right=TreeNode([m
+[32m+[m[32m                5,[m
+[32m+[m[32m                right=TreeNode(6),[m
+[32m+[m[32m            ),[m
+[32m+[m[32m        ),[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert hierarchy_depth(root) == hierarchy_depth_iterative(root)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_recursive_and_bfs_match():[m
+[32m+[m[32m    """Recursive DFS and BFS must return the same depth."""[m
+[32m+[m
+[32m+[m[32m    root = TreeNode([m
+[32m+[m[32m        1,[m
+[32m+[m[32m        left=TreeNode(2),[m
+[32m+[m[32m        right=TreeNode([m
+[32m+[m[32m            3,[m
+[32m+[m[32m            left=TreeNode(4),[m
+[32m+[m[32m            right=TreeNode(5),[m
+[32m+[m[32m        ),[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert hierarchy_depth(root) == max_depth_bfs(root)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_all_three_implementations_match():[m
+[32m+[m[32m    """DFS recursive, DFS iterative and BFS must agree."""[m
+[32m+[m
+[32m+[m[32m    root = TreeNode([m
+[32m+[m[32m        1,[m
+[32m+[m[32m        left=TreeNode([m
+[32m+[m[32m            2,[m
+[32m+[m[32m            left=TreeNode(4),[m
+[32m+[m[32m            right=TreeNode(5),[m
+[32m+[m[32m        ),[m
+[32m+[m[32m        right=TreeNode([m
+[32m+[m[32m            3,[m
+[32m+[m[32m            right=TreeNode(6),[m
+[32m+[m[32m        ),[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert hierarchy_depth(root) == hierarchy_depth_iterative(root)[m
+[32m+[m[32m    assert hierarchy_depth(root) == max_depth_bfs(root)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_cycle_is_detected():[m
+[32m+[m[32m    """Recursive DFS detects a cycle."""[m
+[32m+[m
+[32m+[m[32m    root = TreeNode(1)[m
+[32m+[m[32m    child = TreeNode(2)[m
+[32m+[m
+[32m+[m[32m    root.left = child[m
+[32m+[m[32m    child.left = root[m
+[32m+[m
+[32m+[m[32m    with pytest.raises(HierarchyCycleError):[m
+[32m+[m[32m        hierarchy_depth(root)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_bfs_cycle_is_detected():[m
+[32m+[m[32m    """BFS detects repeated nodes."""[m
+[32m+[m
+[32m+[m[32m    root = TreeNode(1)[m
+[32m+[m[32m    child = TreeNode(2)[m
+[32m+[m
+[32m+[m[32m    root.left = child[m
+[32m+[m[32m    child.left = root[m
+[32m+[m
+[32m+[m[32m    with pytest.raises(HierarchyCycleError):[m
+[32m+[m[32m        max_depth_bfs(root)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_iterative_cycle_is_detected():[m
+[32m+[m[32m    """Iterative traversal detects repeated nodes."""[m
+[32m+[m
+[32m+[m[32m    root = TreeNode(1)[m
+[32m+[m[32m    child = TreeNode(2)[m
+[32m+[m
+[32m+[m[32m    root.left = child[m
+[32m+[m[32m    child.left = root[m
+[32m+[m
+[32m+[m[32m    with pytest.raises(HierarchyCycleError):[m
+[32m+[m[32m        hierarchy_depth_iterative(root)[m
+\ No newline at end of file[m
+[1mdiff --git a/requirements.txt b/requirements.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5c888f3[m
+[1m--- /dev/null[m
+[1m+++ b/requirements.txt[m
+[36m@@ -0,0 +1,113 @@[m
+[32m+[m[32mannotated-types==0.8.0[m
+[32m+[m[32manyio==4.15.1[m
+[32m+[m[32margon2-cffi==25.1.0[m
+[32m+[m[32margon2-cffi-bindings==26.1.0[m
+[32m+[m[32marrow==1.4.0[m
+[32m+[m[32masttokens==3.0.2[m
+[32m+[m[32masync-lru==2.3.0[m
+[32m+[m[32mattrs==26.1.0[m
+[32m+[m[32mbabel==2.18.0[m
+[32m+[m[32mbeautifulsoup4==4.15.0[m
+[32m+[m[32mbleach==6.4.0[m
+[32m+[m[32mcertifi==2026.7.22[m
+[32m+[m[32mcffi==2.1.1[m
+[32m+[m[32mcharset-normalizer==3.5.1[m
+[32m+[m[32mcloudpickle==3.1.2[m
+[32m+[m[32mcolorama==0.4.6[m
+[32m+[m[32mcomm==0.2.3[m
+[32m+[m[32mdebugpy==1.8.22[m
+[32m+[m[32mdefusedxml==0.7.1[m
+[32m+[m[32mexecuting==2.2.1[m
+[32m+[m[32mfastjsonschema==2.22.2[m
+[32m+[m[32mfqdn==1.5.1[m
+[32m+[m[32mh11==0.16.0[m
+[32m+[m[32mhttpcore==1.0.9[m
+[32m+[m[32mhttpcore2==2.13.0[m
+[32m+[m[32mhttpx==0.28.1[m
+[32m+[m[32mhttpx2==2.13.0[m
+[32m+[m[32midna==3.20[m
+[32m+[m[32miniconfig==2.3.0[m
+[32m+[m[32mipykernel==7.3.0[m
+[32m+[m[32mipython==9.17.1[m
+[32m+[m[32mipython_pygments_lexers==1.1.1[m
+[32m+[m[32misoduration==20.11.0[m
+[32m+[m[32mjedi==0.20.0[m
+[32m+[m[32mJinja2==3.1.6[m
+[32m+[m[32mjiter==0.17.0[m
+[32m+[m[32mjoblib==1.6.0[m
+[32m+[m[32mjson5==0.15.0[m
+[32m+[m[32mjsonpointer==3.1.1[m
+[32m+[m[32mjsonschema==4.26.0[m
+[32m+[m[32mjsonschema-specifications==2025.9.1[m
+[32m+[m[32mjupyter-events==0.12.1[m
+[32m+[m[32mjupyter-lsp==2.3.1[m
+[32m+[m[32mjupyter_builder==1.2.3[m
+[32m+[m[32mjupyter_client==8.10.0[m
+[32m+[m[32mjupyter_core==5.9.1[m
+[32m+[m[32mjupyter_server==2.21.1[m
+[32m+[m[32mjupyter_server_terminals==0.5.4[m
+[32m+[m[32mjupyterlab==4.6.3[m
+[32m+[m[32mjupyterlab_pygments==0.3.0[m
+[32m+[m[32mjupyterlab_server==2.28.1[m
+[32m+[m[32mlark==1.3.1[m
+[32m+[m[32mMarkupSafe==3.0.3[m
+[32m+[m[32mmatplotlib-inline==0.2.2[m
+[32m+[m[32mmistune==3.3.4[m
+[32m+[m[32mnarwhals==2.26.0[m
+[32m+[m[32mnbclient==0.11.0[m
+[32m+[m[32mnbconvert==7.17.1[m
+[32m+[m[32mnbformat==5.11.1[m
+[32m+[m[32mnest-asyncio2==1.7.2[m
+[32m+[m[32mnotebook_shim==0.2.4[m
+[32m+[m[32mnumpy==2.5.3[m
+[32m+[m[32mopenai==3.16.2[m
+[32m+[m[32mpackaging==26.3[m
+[32m+[m[32mpandas==3.0.6[m
+[32m+[m[32mpandocfilters==1.5.1[m
+[32m+[m[32mparso==0.8.7[m
+[32m+[m[32mplatformdirs==4.11.11[m
+[32m+[m[32mpluggy==1.6.0[m
+[32m+[m[32mprometheus_client==0.26.0[m
+[32m+[m[32mprompt_toolkit==3.0.53[m
+[32m+[m[32mpsutil==7.2.2[m
+[32m+[m[32mpure_eval==0.2.4[m
+[32m+[m[32mpycparser==3.0[m
+[32m+[m[32mpydantic==2.13.5[m
+[32m+[m[32mpydantic_core==2.46.5[m
+[32m+[m[32mPygments==2.21.0[m
+[32m+[m[32mpytest==9.1.1[m
+[32m+[m[32mpython-dateutil==2.9.0.post0[m
+[32m+[m[32mpython-dotenv==1.2.3[m
+[32m+[m[32mpython-json-logger==4.2.0[m
+[32m+[m[32mpywinpty==3.0.5[m
+[32m+[m[32mPyYAML==6.0.3[m
+[32m+[m[32mpyzmq==27.2.0[m
+[32m+[m[32mreferencing==0.37.0[m
+[32m+[m[32mrequests==2.34.2[m
+[32m+[m[32mrfc3339-validator==0.1.4[m
+[32m+[m[32mrfc3986-validator==0.1.1[m
+[32m+[m[32mrfc3987-syntax==1.1.0[m
+[32m+[m[32mrpds-py==2026.6.3[m
+[32m+[m[32mruff==0.16.8[m
+[32m+[m[32mscikit-learn==1.9.1[m
+[32m+[m[32mscipy==1.18.1[m
+[32m+[m[32mSend2Trash==2.1.0[m
+[32m+[m[32msix==1.17.0[m
+[32m+[m[32msniffio==1.3.1[m
+[32m+[m[32msoupsieve==2.9.2[m
+[32m+[m[32mstack-data==0.6.3[m
+[32m+[m[32mterminado==0.18.1[m
+[32m+[m[32mthreadpoolctl==3.7.0[m
+[32m+[m[32mtinycss2==1.5.1[m
+[32m+[m[32mtornado==6.5.10[m
+[32m+[m[32mtraitlets==5.16.1[m
+[32m+[m[32mtruststore==0.10.4[m
+[32m+[m[32mtyping-inspection==0.4.4[m
+[32m+[m[32mtyping_extensions==4.16.0[m
+[32m+[m[32mtzdata==2026.4[m
+[32m+[m[32muri-template==1.3.0[m
+[32m+[m[32murllib3==2.8.0[m
+[32m+[m[32mwcwidth==0.8.4[m
+[32m+[m[32mwebcolors==25.10.0[m
+[32m+[m[32mwebencodings==0.6.1[m
+[32m+[m[32mwebsocket-client==1.9.2[m
+[1mdiff --git a/tests/test_vector_search.py b/tests/test_vector_search.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..072276c[m
+[1m--- /dev/null[m
+[1m+++ b/tests/test_vector_search.py[m
+[36m@@ -0,0 +1,55 @@[m
+[32m+[m[32mimport numpy as np[m
+[32m+[m[32mimport pytest[m
+[32m+[m
+[32m+[m[32mfrom ai_core.vector_search import find_similar_documents[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_returns_documents_in_descending_score_order():[m
+[32m+[m[32m    documents = ["doc1.txt", "doc2.txt", "doc3.txt"][m
+[32m+[m
+[32m+[m[32m    embeddings = np.array([[m
+[32m+[m[32m        [1.0, 0.0],[m
+[32m+[m[32m        [0.5, 0.5],[m
+[32m+[m[32m        [0.0, 1.0],[m
+[32m+[m[32m    ])[m
+[32m+[m
+[32m+[m[32m    query = np.array([1.0, 0.0])[m
+[32m+[m
+[32m+[m[32m    results = find_similar_documents([m
+[32m+[m[32m        documents,[m
+[32m+[m[32m        embeddings,[m
+[32m+[m[32m        query,[m
+[32m+[m[32m        top_k=2,[m
+[32m+[m[32m    )[m
+[32m+[m
+[32m+[m[32m    assert results == [[m
+[32m+[m[32m        {"document": "doc1.txt", "score": 1.0},[m
+[32m+[m[32m        {"document": "doc2.txt", "score": 0.5},[m
+[32m+[m[32m    ][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_rejects_empty_document_list():[m
+[32m+[m[32m    embeddings = np.array([[1.0, 0.0]])[m
+[32m+[m[32m    query = np.array([1.0, 0.0])[m
+[32m+[m
+[32m+[m[32m    with pytest.raises(ValueError, match="document_names"):[m
+[32m+[m[32m        find_similar_documents([], embeddings, query, top_k=1)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_rejects_mismatched_dimensions():[m
+[32m+[m[32m    documents = ["doc1.txt"][m
+[32m+[m
+[32m+[m[32m    embeddings = np.array([[1.0, 0.0]])[m
+[32m+[m[32m    query = np.array([1.0, 0.0, 0.0])[m
+[32m+[m
+[32m+[m[32m    with pytest.raises(ValueError, match="dimensions"):[m
+[32m+[m[32m        find_similar_documents(documents, embeddings, query, top_k=1)[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef test_rejects_invalid_top_k():[m
+[32m+[m[32m    documents = ["doc1.txt"][m
+[32m+[m[32m    embeddings = np.array([[1.0, 0.0]])[m
+[32m+[m[32m    query = np.array([1.0, 0.0])[m
+[32m+[m
+[32m+[m[32m    with pytest.raises(ValueError, match="top_k"):[m
+[32m+[m[32m        find_similar_documents(documents, embeddings, query, top_k=0)[m
+\ No newline at end of file[m
+[1mdiff --git a/tools/__init__.py b/tools/__init__.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/tools/project_audit.py b/tools/project_audit.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f7c487b[m
+[1m--- /dev/null[m
+[1m+++ b/tools/project_audit.py[m
+[36m@@ -0,0 +1,35 @@[m
+[32m+[m[32mfrom pathlib import Path[m
+[32m+[m
+[32m+[m
+[32m+[m[32mREQUIRED_PATHS = [[m
+[32m+[m[32m    Path("README.md"),[m
+[32m+[m[32m    Path(".gitignore"),[m
+[32m+[m[32m    Path("main.py"),[m
+[32m+[m[32m    Path("ai_core"),[m
+[32m+[m[32m    Path("tests"),[m
+[32m+[m[32m][m
+[32m+[m
+[32m+[m
+[32m+[m[32mdef audit_project(root: Path) -> bool:[m
+[32m+[m[32m    all_present = True[m
+[32m+[m
+[32m+[m[32m    for required_path in REQUIRED_PATHS:[m
+[32m+[m[32m        full_path = root / required_path[m
+[32m+[m[32m        exists = full_path.exists()[m
+[32m+[m
+[32m+[m[32m        status = "FOUND" if exists else "MISSING"[m
+[32m+[m[32m        print(f"{status}: {required_path}")[m
+[32m+[m
+[32m+[m[32m        if not exists:[m
+[32m+[m[32m            all_present = False[m
+[32m+[m
+[32m+[m[32m    return all_present[m
+[32m+[m
+[32m+[m
+[32m+[m[32mif __name__ == "__main__":[m
+[32m+[m[32m    project_root = Path(".")[m
+[32m+[m
+[32m+[m[32m    if audit_project(project_root):[m
+[32m+[m[32m        print("\nProject structure is ready.")[m
+[32m+[m[32m    else:[m
+[32m+[m[32m        print("\nProject structure needs attention.")[m
+\ No newline at end of file[m
+[1mdiff --git a/tools/show_project_info.py b/tools/show_project_info.py[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9d51c31[m
+[1m--- /dev/null[m
+[1m+++ b/tools/show_project_info.py[m
+[36m@@ -0,0 +1,9 @@[m
+[32m+[m[32mfrom ai_core.project_metadata import get_project_metadata[m
+[32m+[m
+[32m+[m
+[32m+[m[32mmetadata = get_project_metadata()[m
+[32m+[m
+[32m+[m[32mprint(f"Project: {metadata.name}")[m
+[32m+[m[32mprint(f"Version: {metadata.version}")[m
+[32m+[m[32mprint(f"Status: {metadata.status}")[m
+[32m+[m[32mprint(f"Description: {metadata.description}")[m
+\ No newline at end of file[m

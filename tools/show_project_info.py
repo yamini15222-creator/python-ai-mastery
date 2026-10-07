@@ -1,6 +1,5 @@
 from ai_core.project_metadata import get_project_metadata
 
-
 metadata = get_project_metadata()
 
 print(f"Project: {metadata.name}")

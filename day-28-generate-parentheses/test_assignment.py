@@ -1,5 +1,4 @@
 import pytest
-
 from assignment import generate_test_patterns
 
 
