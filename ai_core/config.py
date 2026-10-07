@@ -1,18 +1,16 @@
-from dataclasses import dataclass
+from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-@dataclass(frozen=True)
-class ModelConfig:
-    model: str = "demo-llm"
-    temperature: float = 0.5
-    max_tokens: int = 500
+DATA_DIR = BASE_DIR / "data"
+CONVERSATION_FILE = DATA_DIR / "conversations.json"
+DOCUMENT_FILE = DATA_DIR / "documents.json"
 
-    def __post_init__(self) -> None:
-        if not self.model.strip():
-            raise ValueError("Model name cannot be empty.")
+MIN_TOPIC_LENGTH = 2
+MAX_TOPIC_LENGTH = 100
 
-        if not 0 <= self.temperature <= 2:
-            raise ValueError("Temperature must be between 0 and 2.")
-
-        if not 1 <= self.max_tokens <= 4_000:
-            raise ValueError("max_tokens must be between 1 and 4000.")
+SUPPORTED_LEVELS = {
+    "beginner",
+    "intermediate",
+    "advanced",
+}

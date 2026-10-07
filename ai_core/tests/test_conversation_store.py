@@ -9,14 +9,19 @@ class ConversationStore:
         self.file_path = file_path
 
     def save(self, history: list[dict[str, str]]) -> None:
-        """Save conversation history to JSON."""
+        """Save conversation history to a JSON file."""
         self.file_path.parent.mkdir(parents=True, exist_ok=True)
 
         with self.file_path.open("w", encoding="utf-8") as file:
-            json.dump(history, file, indent=4, ensure_ascii=False)
+            json.dump(
+                history,
+                file,
+                indent=4,
+                ensure_ascii=False,
+            )
 
     def load(self) -> list[dict[str, str]]:
-        """Load conversation history from JSON."""
+        """Load conversation history from a JSON file."""
         if not self.file_path.exists():
             return []
 
@@ -24,6 +29,8 @@ class ConversationStore:
             data = json.load(file)
 
         if not isinstance(data, list):
-            raise ValueError("Conversation history must be a JSON list.")
+            raise TypeError(
+                "Conversation history must be a JSON list."
+            )
 
         return data
